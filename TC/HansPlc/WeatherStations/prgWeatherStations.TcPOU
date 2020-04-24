@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="prgWeatherStations" Id="{63837f3c-745d-4340-ad1b-7cd9b6b37ded}" SpecialFunc="None">
+    <Declaration><![CDATA[{attribute addProperty Name "Program"}
+PROGRAM prgWeatherStations
+VAR	
+	{attribute addProperty Name "Weather Cyclic"}
+	_weatherStations : fbWorldWeatherWatch;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[_weatherStations();	]]></ST>
+    </Implementation>
+    <LineIds Name="prgWeatherStations">
+      <LineId Id="24" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

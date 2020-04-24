@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <DUT Name="stContinuousValueLimits" Id="{46de2d8f-e96c-49d9-a008-9e1b5b9871a5}">
+    <Declaration><![CDATA[TYPE stContinuousValueLimits :
+STRUCT
+	{attribute addProperty Name "<#Min#>}
+	Minimum : REAL;	
+	{attribute addProperty Name "<#Max#>}
+	Maximum : REAL;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

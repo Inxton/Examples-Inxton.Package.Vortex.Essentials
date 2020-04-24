@@ -1,0 +1,110 @@
+﻿<Window
+    x:Class="Weather.Essentials.Wpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Weather.Essentials.Wpf"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vortex="http://vortex.mts/xaml"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    Margin="25"
+    Background="{DynamicResource Surface}"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    <StackPanel>
+        <TextBlock
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="25"
+            FontWeight="Bold"
+            Foreground="{DynamicResource OnSurface}">
+            INXTON Styling
+        </TextBlock>
+        <Grid Margin="10" Style="{DynamicResource Card}">
+            <TabControl>
+                <TabItem Header="Signals and cards">
+                    <Grid>
+                        <WrapPanel>
+
+                            <StackPanel
+                                Margin="10"
+                                Orientation="Horizontal"
+                                Style="{DynamicResource Card}">
+                                <StackPanel>
+                                    <Label FontWeight="Bold">Control voltage</Label>
+                                    <Label>Card A2 Signal 4</Label>
+                                </StackPanel>
+                                <Ellipse
+                                    Width="50"
+                                    Height="50"
+                                    Margin="50,5,5,0"
+                                    Fill="{DynamicResource SignalOn}" />
+                            </StackPanel>
+
+                            <StackPanel
+                                Margin="10"
+                                Orientation="Horizontal"
+                                Style="{DynamicResource Card}">
+                                <StackPanel>
+                                    <Label FontWeight="Bold">Pressure OK</Label>
+                                    <Label>Card A2 Signal 5</Label>
+                                </StackPanel>
+                                <Ellipse
+                                    Width="50"
+                                    Height="50"
+                                    Margin="50,5,5,0"
+                                    Fill="{DynamicResource SignalOn}" />
+                            </StackPanel>
+
+
+                            <StackPanel
+                                Margin="10"
+                                Orientation="Horizontal"
+                                Style="{DynamicResource Card}">
+                                <StackPanel>
+                                    <Label FontWeight="Bold">Safety OK</Label>
+                                    <Label>Card A2 Signal 6</Label>
+                                </StackPanel>
+                                <Ellipse
+                                    Width="50"
+                                    Height="50"
+                                    Margin="50,5,5,0"
+                                    Fill="{DynamicResource SignalOff}" />
+                            </StackPanel>
+
+                        </WrapPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Buttons">
+                    <StackPanel>
+                        <Button Content="PrimaryTextButtonStyle" Style="{DynamicResource PrimaryTextButtonStyle}" />
+                        <Button Content="PrimaryTextButtonOutlineStyle" Style="{DynamicResource PrimaryTextButtonOutlineStyle}" />
+                        <Button Content="SecondaryTextButtonStyle" Style="{DynamicResource SecondaryTextButtonStyle}" />
+                        <Button Content="SecondaryTextButtonOutlineStyle" Style="{DynamicResource SecondaryTextButtonOutlineStyle}" />
+                        <Button Content="AccentTextButtonStyle" Style="{DynamicResource AccentTextButtonStyle}" />
+                        <Button Content="AccentTextButtonOutlineStyle" Style="{DynamicResource AccentTextButtonOutlineStyle}" />
+                        <Button Content="AlertTextButtonStyle" Style="{DynamicResource AlertTextButtonStyle}" />
+                        <Button Content="AlertTextButtonOutlineStyle" Style="{DynamicResource AlertTextButtonOutlineStyle}" />
+                    </StackPanel>
+                </TabItem>
+                <TabItem Header="Generated">
+                    <Grid>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations}" PresentationType="Control">
+                            <vortex:RenderableContentControl.RootContainer>
+                                <UniformGrid Columns="4" Rows="2">
+
+                                </UniformGrid>
+                            </vortex:RenderableContentControl.RootContainer>
+                        </vortex:RenderableContentControl>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+        </Grid>
+    </StackPanel>
+
+</Window>
