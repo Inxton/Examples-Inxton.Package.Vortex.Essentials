@@ -1,6 +1,6 @@
 ![Inxton logo](./assets/logo.png)
 
-If you have ever struggled to maintain your HMI in synch with your PLC program, you should continue reading. This repo presents a unique library that bring PLC blocks into compelling visual form.
+If you have ever struggled to maintain your HMI in synch with your PLC program, you should continue reading. This repo presents a unique library that brings PLC blocks into compelling visual form.
 Maintaining the UI/HMI that involves PLC can be very expensive, especially when there are many conflicting requirements throughout the life cycle of the application. Inxton comes with an answer that allows you to scale your solution quickly.
 
 # About sample projects
@@ -12,7 +12,7 @@ In this repository, you'll find examples that aim o present some key features of
 This example shows an example of Recipe user control that stores, retrieves, uploads, and keeps track of changes.
 
 ~~~ XML
-<!-- Renderable content control that displays _recipe object with presentation type 'Settings' this means that the renderer will choose View 'stRecipeSettingsView' and ViewMode 'stRecipeSettingsViewModel'-->
+<!-- Renderable content control that displays _recipe object with presentation type 'Settings' this means that the renderer will choose View 'stRecipeSettingsView' and ViewModel 'stRecipeSettingsViewModel'-->
 <vortex:RenderableContentControl DataContext="{Binding PLC.RecipeData._recipe}" PresentationType="Settings">
 <!-- This will override default root container (StackPanel) with Grid -->
     <vortex:RenderableContentControl.RootContainer>
@@ -23,15 +23,22 @@ This example shows an example of Recipe user control that stores, retrieves, upl
 
 ## Recipe user control
 
-If you need to have more complex logic behind UI user controls you can use MVVM pattern. The rendering system will detect that a ```View``` has respective ```ViewModel``` and that ```ViewModel``` will be automatically set as ```DataContext``` of given ```View```. When there is a view that does not have corresponding ViewModel class, the  renderer will set DataContext the instance of the TwinObject.
+If you need to have more complex logic behind your UI user controls and you need to decouple UI from the code, you can use the MVVM pattern. This example is - for simplicity - not the pure form of MVVM. If you want to know more about MVVM, you can search online [here](https://www.wintellect.com/model-view-viewmodel-mvvm-explained/) is just one of them.
 
-```stRecipeSettingsView``` will have DataContext ```stRecipeSettingsViewModel```
+### Few notes about the rendering
 
-You can see that the recipe user control has some more complex features of which the logic is placed in the ViewModel class.
+> When the rendering system will detect that a ```View``` has respective ```ViewModel``` and that ```ViewModel``` will be automatically set as ```DataContext``` of given ```View```. The respective twin object is set to the property ```Model``` of the ViewModel class. When there is a view that does not have a corresponding ViewModel class, the renderer will set DataContext the instance of the TwinObject.
+
+What if we have a ViewModel class?
+> ```stRecipeSettingsView``` will have DataContext ```stRecipeSettingsViewModel``` of which property ```Model``` will be instance of stRecipe class [TwinObject]
+
+What if we do not have a ViewModel class?
+> ```stRecipeSettingView``` will have DataContext an instance of ```stRecipe``` class.
+
 
 ### Things to note in this example
 
-Instead of using ```RenderableContentControl``` we are using C# code to generate the UI. The ```View``` contains simple ```ContentControl``` that binds to the property ```DataPresentation```
+Instead of using ```RenderableContentControl```, we are using C# code to generate the UI. The ```stRecipeSettingsView``` contains simple ```ContentControl``` element that binds to the property ```DataPresentation``` of ```stRecipeSettingsViewModel```
 
 ~~~ XML
    <GroupBox Header="Data"
@@ -43,7 +50,7 @@ Instead of using ```RenderableContentControl``` we are using C# code to generate
     </GroupBox>
 ~~~
 
-```DataPresentation``` property is set in ```ViewModel``` object, by selecting editable or readonly form.
+```DataPresentation``` property is set in ```ViewModel``` object by selecting the editable or read-only form.
 
 ~~~ C#
 private const string DisplayModePresentationType = "ShadowDisplay";
@@ -67,7 +74,9 @@ private void DisplayDataMode()
 ~~~
 
 
-In order to quickly check the way the recipe system will scale uncomment the code in ```stRecipe``` structure. Run the compiler, load program to the PLC and run the application. you should get result shown bellow.
+### Quickly explore auto-generated items
+
+In order to quickly check the way, the recipe system will scale uncomment the code in ```stRecipe``` structure. Run the compiler, load program to the PLC, and run the application. You should get the result shown below.
 
 
 **Prior to modification**
@@ -75,17 +84,17 @@ In order to quickly check the way the recipe system will scale uncomment the cod
 ~~~ 
 TYPE stRecipe :
 STRUCT
-	{attribute addProperty Name "<#Recipe name#>"}
-	_recipeName : STRING;
-	{attribute addProperty Name "<#Description#>"}
-	_description : STRING(255);
-	// Uncomment following lines run the comiler and check that the fiels are added to the UI, and you can save and retrieve the newly added variables.
-	(*{attribute addProperty Name "<#Lenght#> [mm]"}
-	_lenght : stContinuousValueLimits;
-	{attribute addProperty Name "<#Height#> [mm]"}
-	_height : stContinuousValueLimits;
-	{attribute addProperty Name "<#Thickness#> [mm]"}
-	_thikness : stContinuousValueLimits;*)
+    {attribute addProperty Name "<#Recipe name#>"}
+    _recipeName : STRING;
+    {attribute addProperty Name "<#Description#>"}
+    _description : STRING(255);
+    // Uncomment following lines run the comiler and check that the fiels are added to the UI, and you can save and retrieve the newly added variables.
+    (*{attribute addProperty Name "<#Lenght#> [mm]"}
+    _lenght : stContinuousValueLimits;
+    {attribute addProperty Name "<#Height#> [mm]"}
+    _height : stContinuousValueLimits;
+    {attribute addProperty Name "<#Thickness#> [mm]"}
+    _thikness : stContinuousValueLimits;*)
 END_STRUCT
 END_TYPE
 ~~~
@@ -94,19 +103,20 @@ END_TYPE
 
 
 **After modification**
+
 ~~~
 TYPE stRecipe :
 STRUCT
-	{attribute addProperty Name "<#Recipe name#>"}
-	_recipeName : STRING;
-	{attribute addProperty Name "<#Description#>"}
-	_description : STRING(255);
-	{attribute addProperty Name "<#Lenght#> [mm]"}
-	_lenght : stContinuousValueLimits;
-	{attribute addProperty Name "<#Height#> [mm]"}
-	_height : stContinuousValueLimits;
-	{attribute addProperty Name "<#Thickness#> [mm]"}
-	_thikness : stContinuousValueLimits;
+    {attribute addProperty Name "<#Recipe name#>"}
+    _recipeName : STRING;
+    {attribute addProperty Name "<#Description#>"}
+    _description : STRING(255);
+    {attribute addProperty Name "<#Lenght#> [mm]"}
+    _lenght : stContinuousValueLimits;
+    {attribute addProperty Name "<#Height#> [mm]"}
+    _height : stContinuousValueLimits;
+    {attribute addProperty Name "<#Thickness#> [mm]"}
+    _thikness : stContinuousValueLimits;
 END_STRUCT
 END_TYPE
 ~~~
@@ -116,7 +126,7 @@ END_TYPE
 # License
 
 TLDR
-> You can use Inxton.Vortex.Framework free of charge, although when you want to use it in a production environment you need to go to  [INXTON.com](https://www.inxton.com/) and purchase a license.
+> You can use Inxton.Vortex.Framework free of charge, although when you want to use it in a production environment, you need to go to  [INXTON.com](https://www.inxton.com/) and purchase a license.
 
 To make our lawyers happy - read the whole license agreement [here](https://github.com/Inxton/about/blob/master/license.md)
 

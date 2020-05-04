@@ -14,11 +14,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.Essentials.Wpf", "WeatherStations\Weather.Essentials.Wpf\Weather.Essentials.Wpf.csproj", "{95E479AC-8808-46EB-BAB1-D75A3D9F9F74}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recipes", "Recipes", "{F13DC6FD-16BE-4678-9EEB-22F9654E1971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipes.Essentials.Wpf", "Recipes\Recipes.Essentials.Wpf\Recipes.Essentials.Wpf.csproj", "{FA579FBB-12E8-4E6C-9CD6-6CB015173377}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{F827BA8D-3CCF-48E4-B003-3BEC7FA9B20E}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipes.Essentials.Wpf", "Recipes\Recipes.Essentials.Wpf\Recipes.Essentials.Wpf.csproj", "{FA579FBB-12E8-4E6C-9CD6-6CB015173377}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -144,7 +146,7 @@ Global
 		{FA579FBB-12E8-4E6C-9CD6-6CB015173377} = {F13DC6FD-16BE-4678-9EEB-22F9654E1971}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {86F1AB36-9A8F-42AD-8F42-D078EDF6998B}
 		RESX_PrefixTranslations = False
+		SolutionGuid = {86F1AB36-9A8F-42AD-8F42-D078EDF6998B}
 	EndGlobalSection
 EndGlobal
