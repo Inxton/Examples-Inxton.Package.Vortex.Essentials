@@ -20,16 +20,25 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             FontSize="25"
+            Margin="0,24,0,0"
             FontWeight="Bold"
             Foreground="{DynamicResource OnSurface}">
             INXTON Styling
         </TextBlock>
         <Grid Margin="10" Style="{DynamicResource Card}">
             <TabControl>
+                <TabItem Header="Generated">
+                    <Grid>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations}" PresentationType="Control">
+                            <vortex:RenderableContentControl.RootContainer>
+                                <UniformGrid Columns="4" Rows="2" />
+                            </vortex:RenderableContentControl.RootContainer>
+                        </vortex:RenderableContentControl>
+                    </Grid>
+                </TabItem>
                 <TabItem Header="Signals and cards">
                     <Grid>
                         <WrapPanel>
-
                             <StackPanel
                                 Margin="10"
                                 Orientation="Horizontal"
@@ -91,17 +100,7 @@
                         <Button Content="AlertTextButtonOutlineStyle" Style="{DynamicResource AlertTextButtonOutlineStyle}" />
                     </StackPanel>
                 </TabItem>
-                <TabItem Header="Generated">
-                    <Grid>
-                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations}" PresentationType="Control">
-                            <vortex:RenderableContentControl.RootContainer>
-                                <UniformGrid Columns="4" Rows="2">
 
-                                </UniformGrid>
-                            </vortex:RenderableContentControl.RootContainer>
-                        </vortex:RenderableContentControl>
-                    </Grid>
-                </TabItem>
             </TabControl>
 
         </Grid>

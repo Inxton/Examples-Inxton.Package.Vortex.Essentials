@@ -133,7 +133,13 @@ To make our lawyers happy - read the whole license agreement [here](https://gith
 
 ## What to do next?
 
-Check out the documentation  [Inxton.Package.Vortex.Core](https://github.com/Inxton/Inxton.Package.Vortex.Core)
+Try [Weather stations example](./WeatherStations/README.md)
+
+Check out the [Inxton.Package.Vortex.Core](https://github.com/Inxton/Inxton.Package.Vortex.Core) documentation
+
+Check out the [Inxton.Package.Vortex.Essentials](https://github.com/Inxton/Inxton.Package.Vortex.Essentials#how-to-generate-ui)  documentation
+
+More info about [Styles](https://github.com/Inxton/Inxton.Package.Vortex.Essentials/tree/master/Styles)
 
 Install the extension from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Inxton.InxtonVortexBuilderExtensionPre)
 
