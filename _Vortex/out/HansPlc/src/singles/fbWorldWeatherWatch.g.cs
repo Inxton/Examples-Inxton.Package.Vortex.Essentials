@@ -131,41 +131,12 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.OnlinerString _PlcCommentOnCurrentWeather;
-		[Container(Layout.Stack)]
-		public Vortex.Connector.ValueTypes.OnlinerString PlcCommentOnCurrentWeather
-		{
-			get
-			{
-				return _PlcCommentOnCurrentWeather;
-			}
-		}
-
-		[Container(Layout.Stack)]
-		Vortex.Connector.ValueTypes.Online.IOnlineString IfbWorldWeatherWatch.PlcCommentOnCurrentWeather
-		{
-			get
-			{
-				return PlcCommentOnCurrentWeather;
-			}
-		}
-
-		[Container(Layout.Stack)]
-		Vortex.Connector.ValueTypes.Shadows.IShadowString IShadowfbWorldWeatherWatch.PlcCommentOnCurrentWeather
-		{
-			get
-			{
-				return PlcCommentOnCurrentWeather;
-			}
-		}
-
 		public void LazyOnlineToShadow()
 		{
 			NorthPole.LazyOnlineToShadow();
 			SouthPole.LazyOnlineToShadow();
 			Verl.LazyOnlineToShadow();
 			Kriva.LazyOnlineToShadow();
-			PlcCommentOnCurrentWeather.Shadow = PlcCommentOnCurrentWeather.LastValue;
 		}
 
 		public void LazyShadowToOnline()
@@ -174,7 +145,6 @@ namespace HansPlc
 			SouthPole.LazyShadowToOnline();
 			Verl.LazyShadowToOnline();
 			Kriva.LazyShadowToOnline();
-			PlcCommentOnCurrentWeather.Cyclic = PlcCommentOnCurrentWeather.Shadow;
 		}
 
 		public PlainfbWorldWeatherWatch CreatePlainerType()
@@ -331,8 +301,6 @@ namespace HansPlc
 			_Verl.AttributeName = "<#Verl, Germany#>";
 			_Kriva = new structWeatherStation(this, "<#Kriva, Slovakia#>", "Kriva");
 			_Kriva.AttributeName = "<#Kriva, Slovakia#>";
-			_PlcCommentOnCurrentWeather = @Connector.Online.Adapter.CreateSTRING(this, "<#What plc says#>", "PlcCommentOnCurrentWeather");
-			PlcCommentOnCurrentWeather.AttributeName = "<#What plc says#>";
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -349,8 +317,6 @@ namespace HansPlc
 			_Verl.AttributeName = "<#Verl, Germany#>";
 			_Kriva = new structWeatherStation();
 			_Kriva.AttributeName = "<#Kriva, Slovakia#>";
-			_PlcCommentOnCurrentWeather = Vortex.Connector.IConnectorFactory.CreateSTRING();
-			PlcCommentOnCurrentWeather.AttributeName = "<#What plc says#>";
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -392,12 +358,6 @@ namespace HansPlc
 			get;
 		}
 
-		[Container(Layout.Stack)]
-		Vortex.Connector.ValueTypes.Online.IOnlineString PlcCommentOnCurrentWeather
-		{
-			get;
-		}
-
 		System.String AttributeName
 		{
 			get;
@@ -432,12 +392,6 @@ namespace HansPlc
 		}
 
 		IShadowstructWeatherStation Kriva
-		{
-			get;
-		}
-
-		[Container(Layout.Stack)]
-		Vortex.Connector.ValueTypes.Shadows.IShadowString PlcCommentOnCurrentWeather
 		{
 			get;
 		}
@@ -515,28 +469,12 @@ namespace HansPlc
 			}
 		}
 
-		System.String _PlcCommentOnCurrentWeather;
-		[Container(Layout.Stack)]
-		public System.String PlcCommentOnCurrentWeather
-		{
-			get
-			{
-				return _PlcCommentOnCurrentWeather;
-			}
-
-			set
-			{
-				_PlcCommentOnCurrentWeather = value;
-			}
-		}
-
 		public void CopyPlainToCyclic(HansPlc.fbWorldWeatherWatch target)
 		{
 			NorthPole.CopyPlainToCyclic(target.NorthPole);
 			SouthPole.CopyPlainToCyclic(target.SouthPole);
 			Verl.CopyPlainToCyclic(target.Verl);
 			Kriva.CopyPlainToCyclic(target.Kriva);
-			target.PlcCommentOnCurrentWeather.Cyclic = PlcCommentOnCurrentWeather;
 		}
 
 		public void CopyPlainToCyclic(HansPlc.IfbWorldWeatherWatch target)
@@ -550,7 +488,6 @@ namespace HansPlc
 			SouthPole.CopyPlainToShadow(target.SouthPole);
 			Verl.CopyPlainToShadow(target.Verl);
 			Kriva.CopyPlainToShadow(target.Kriva);
-			target.PlcCommentOnCurrentWeather.Shadow = PlcCommentOnCurrentWeather;
 		}
 
 		public void CopyPlainToShadow(HansPlc.IShadowfbWorldWeatherWatch target)
@@ -564,7 +501,6 @@ namespace HansPlc
 			SouthPole.CopyCyclicToPlain(source.SouthPole);
 			Verl.CopyCyclicToPlain(source.Verl);
 			Kriva.CopyCyclicToPlain(source.Kriva);
-			PlcCommentOnCurrentWeather = source.PlcCommentOnCurrentWeather.LastValue;
 		}
 
 		public void CopyCyclicToPlain(HansPlc.IfbWorldWeatherWatch source)
@@ -578,7 +514,6 @@ namespace HansPlc
 			SouthPole.CopyShadowToPlain(source.SouthPole);
 			Verl.CopyShadowToPlain(source.Verl);
 			Kriva.CopyShadowToPlain(source.Kriva);
-			PlcCommentOnCurrentWeather = source.PlcCommentOnCurrentWeather.Shadow;
 		}
 
 		public void CopyShadowToPlain(HansPlc.IShadowfbWorldWeatherWatch source)

@@ -321,8 +321,8 @@ namespace HansPlc
 			_recipeName.AttributeName = "<#Recipe name#>";
 			__description = @Connector.Online.Adapter.CreateSTRING(this, "<#Description#>", "_description");
 			_description.AttributeName = "<#Description#>";
-			__lenght = new stContinuousValueLimits(this, "<#Lenght#> [mm]", "_lenght");
-			__lenght.AttributeName = "<#Lenght#> [mm]";
+			__lenght = new stContinuousValueLimits(this, "<#Length#> [mm]", "_lenght");
+			__lenght.AttributeName = "<#Length#> [mm]";
 			__height = new stContinuousValueLimits(this, "<#Height#> [mm]", "_height");
 			__height.AttributeName = "<#Height#> [mm]";
 			__thikness = new stContinuousValueLimits(this, "<#Thickness#> [mm]", "_thikness");
@@ -340,7 +340,7 @@ namespace HansPlc
 			__description = Vortex.Connector.IConnectorFactory.CreateSTRING();
 			_description.AttributeName = "<#Description#>";
 			__lenght = new stContinuousValueLimits();
-			__lenght.AttributeName = "<#Lenght#> [mm]";
+			__lenght.AttributeName = "<#Length#> [mm]";
 			__height = new stContinuousValueLimits();
 			__height.AttributeName = "<#Height#> [mm]";
 			__thikness = new stContinuousValueLimits();

@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="___North_pole_station__" xml:space="preserve">
+    <value>North pole station</value>
+  </data>
+  <data name="___South_pole_station__" xml:space="preserve">
+    <value>South pole station</value>
+  </data>
+  <data name="___Verl__Germany__" xml:space="preserve">
+    <value>Verl, Germany</value>
+  </data>
+  <data name="___Kriva__Slovakia__" xml:space="preserve">
+    <value>Kriva, Slovakia</value>
+  </data>
   <data name="___So__the_weather_situation_is_following__" xml:space="preserve">
     <value>So, the weather situation is following</value>
   </data>
@@ -156,21 +168,6 @@
   <data name="___Kriva_station_is_not_available___" xml:space="preserve">
     <value>Kriva station is not available.</value>
   </data>
-  <data name="___North_pole_station__" xml:space="preserve">
-    <value>North pole station</value>
-  </data>
-  <data name="___South_pole_station__" xml:space="preserve">
-    <value>South pole station</value>
-  </data>
-  <data name="___Verl__Germany__" xml:space="preserve">
-    <value>Verl, Germany</value>
-  </data>
-  <data name="___Kriva__Slovakia__" xml:space="preserve">
-    <value>Kriva, Slovakia</value>
-  </data>
-  <data name="___What_plc_says__" xml:space="preserve">
-    <value>What plc says</value>
-  </data>
   <data name="___Min__" xml:space="preserve">
     <value>Min</value>
   </data>
@@ -186,8 +183,8 @@
   <data name="___Description__" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="___Lenght__" xml:space="preserve">
-    <value>Lenght</value>
+  <data name="___Length__" xml:space="preserve">
+    <value>Length</value>
   </data>
   <data name="___Height__" xml:space="preserve">
     <value>Height</value>
@@ -218,5 +215,8 @@
   </data>
   <data name="___Wind_speed__" xml:space="preserve">
     <value>Wind speed</value>
+  </data>
+  <data name="___What_plc_says__" xml:space="preserve">
+    <value>What plc says</value>
   </data>
 </root>

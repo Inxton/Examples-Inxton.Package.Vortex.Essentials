@@ -7,6 +7,7 @@ using Vortex.Connector.Identity;
 
 namespace HansPlc
 {
+	[Container(Layout.Stack)]
 	[Vortex.Connector.Attributes.TypeMetaDescriptorAttribute("{attribute addProperty Name \"Program\" }", "prgWeatherStations", "HansPlc", TypeComplexityEnum.Complex)]
 	public partial class prgWeatherStations : Vortex.Connector.IVortexObject, IprgWeatherStations, IShadowprgWeatherStations, Vortex.Connector.IVortexOnlineObject, Vortex.Connector.IVortexShadowObject
 	{
@@ -55,14 +56,44 @@ namespace HansPlc
 			}
 		}
 
+		Vortex.Connector.ValueTypes.OnlinerString _PlcCommentOnCurrentWeather;
+		[Container(Layout.Stack), Group(Layout.GroupBox)]
+		public Vortex.Connector.ValueTypes.OnlinerString PlcCommentOnCurrentWeather
+		{
+			get
+			{
+				return _PlcCommentOnCurrentWeather;
+			}
+		}
+
+		[Container(Layout.Stack), Group(Layout.GroupBox)]
+		Vortex.Connector.ValueTypes.Online.IOnlineString IprgWeatherStations.PlcCommentOnCurrentWeather
+		{
+			get
+			{
+				return PlcCommentOnCurrentWeather;
+			}
+		}
+
+		[Container(Layout.Stack), Group(Layout.GroupBox)]
+		Vortex.Connector.ValueTypes.Shadows.IShadowString IShadowprgWeatherStations.PlcCommentOnCurrentWeather
+		{
+			get
+			{
+				return PlcCommentOnCurrentWeather;
+			}
+		}
+
 		public void LazyOnlineToShadow()
 		{
 			_weatherStations.LazyOnlineToShadow();
+			PlcCommentOnCurrentWeather.Shadow = PlcCommentOnCurrentWeather.LastValue;
 		}
 
 		public void LazyShadowToOnline()
 		{
 			_weatherStations.LazyShadowToOnline();
+			PlcCommentOnCurrentWeather.Cyclic = PlcCommentOnCurrentWeather.Shadow;
 		}
 
 		public PlainprgWeatherStations CreatePlainerType()
@@ -207,6 +238,8 @@ namespace HansPlc
 			Symbol = Vortex.Connector.IConnector.CreateSymbol(parent.Symbol, symbolTail);
 			__weatherStations = new fbWorldWeatherWatch(this, "Weather Cyclic", "_weatherStations");
 			__weatherStations.AttributeName = "Weather Cyclic";
+			_PlcCommentOnCurrentWeather = @Connector.Online.Adapter.CreateSTRING(this, "<#What plc says#>", "PlcCommentOnCurrentWeather");
+			PlcCommentOnCurrentWeather.AttributeName = "<#What plc says#>";
 			AttributeName = "Program";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -217,6 +250,8 @@ namespace HansPlc
 			PexPreConstructorParameterless();
 			__weatherStations = new fbWorldWeatherWatch();
 			__weatherStations.AttributeName = "Weather Cyclic";
+			_PlcCommentOnCurrentWeather = Vortex.Connector.IConnectorFactory.CreateSTRING();
+			PlcCommentOnCurrentWeather.AttributeName = "<#What plc says#>";
 			AttributeName = "Program";
 			PexConstructorParameterless();
 		}
@@ -243,6 +278,12 @@ namespace HansPlc
 			get;
 		}
 
+		[Container(Layout.Stack), Group(Layout.GroupBox)]
+		Vortex.Connector.ValueTypes.Online.IOnlineString PlcCommentOnCurrentWeather
+		{
+			get;
+		}
+
 		System.String AttributeName
 		{
 			get;
@@ -262,6 +303,12 @@ namespace HansPlc
 	public partial interface IShadowprgWeatherStations : Vortex.Connector.IVortexShadowObject
 	{
 		IShadowfbWorldWeatherWatch _weatherStations
+		{
+			get;
+		}
+
+		[Container(Layout.Stack), Group(Layout.GroupBox)]
+		Vortex.Connector.ValueTypes.Shadows.IShadowString PlcCommentOnCurrentWeather
 		{
 			get;
 		}
@@ -297,9 +344,25 @@ namespace HansPlc
 			}
 		}
 
+		System.String _PlcCommentOnCurrentWeather;
+		[Container(Layout.Stack), Group(Layout.GroupBox)]
+		public System.String PlcCommentOnCurrentWeather
+		{
+			get
+			{
+				return _PlcCommentOnCurrentWeather;
+			}
+
+			set
+			{
+				_PlcCommentOnCurrentWeather = value;
+			}
+		}
+
 		public void CopyPlainToCyclic(HansPlc.prgWeatherStations target)
 		{
 			_weatherStations.CopyPlainToCyclic(target._weatherStations);
+			target.PlcCommentOnCurrentWeather.Cyclic = PlcCommentOnCurrentWeather;
 		}
 
 		public void CopyPlainToCyclic(HansPlc.IprgWeatherStations target)
@@ -310,6 +373,7 @@ namespace HansPlc
 		public void CopyPlainToShadow(HansPlc.prgWeatherStations target)
 		{
 			_weatherStations.CopyPlainToShadow(target._weatherStations);
+			target.PlcCommentOnCurrentWeather.Shadow = PlcCommentOnCurrentWeather;
 		}
 
 		public void CopyPlainToShadow(HansPlc.IShadowprgWeatherStations target)
@@ -320,6 +384,7 @@ namespace HansPlc
 		public void CopyCyclicToPlain(HansPlc.prgWeatherStations source)
 		{
 			_weatherStations.CopyCyclicToPlain(source._weatherStations);
+			PlcCommentOnCurrentWeather = source.PlcCommentOnCurrentWeather.LastValue;
 		}
 
 		public void CopyCyclicToPlain(HansPlc.IprgWeatherStations source)
@@ -330,6 +395,7 @@ namespace HansPlc
 		public void CopyShadowToPlain(HansPlc.prgWeatherStations source)
 		{
 			_weatherStations.CopyShadowToPlain(source._weatherStations);
+			PlcCommentOnCurrentWeather = source.PlcCommentOnCurrentWeather.Shadow;
 		}
 
 		public void CopyShadowToPlain(HansPlc.IShadowprgWeatherStations source)

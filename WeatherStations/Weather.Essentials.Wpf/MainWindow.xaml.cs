@@ -9,6 +9,7 @@ namespace Weather.Essentials.Wpf
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
+            StationStatusUpdater.Get.WriteWeatherStationData();
         }
     }
 

@@ -376,3 +376,6 @@
 2020-05-04 08:52:49.276 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
 2020-05-04 08:52:53.689 +02:00 [INF] Compiling sources 'HansPlc'...
 2020-05-04 08:52:54.716 +02:00 [INF] >>>>>>I, Done
+2020-05-04 14:53:02.133 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-05-04 14:53:08.545 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-05-04 14:53:10.140 +02:00 [INF] >>>>>>I, Done

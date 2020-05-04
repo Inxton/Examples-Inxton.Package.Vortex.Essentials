@@ -50,6 +50,9 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=3.1.1.1361, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MaterialDesignThemes.3.1.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="OpenWeather, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OpenWeather.1.2.0\lib\net452\OpenWeather.dll</HintPath>
+    </Reference>
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Serilog.2.8.0\lib\net46\Serilog.dll</HintPath>
     </Reference>
@@ -61,6 +64,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Device" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -72,6 +76,9 @@
     </Reference>
     <Reference Include="TwinCAT.Ads, Version=4.3.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Beckhoff.TwinCAT.Ads.4.3.7\lib\Net40-full\TwinCAT.Ads.dll</HintPath>
+    </Reference>
+    <Reference Include="UnitsNet, Version=3.36.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\UnitsNet.3.36.0\lib\net35\UnitsNet.dll</HintPath>
     </Reference>
     <Reference Include="Vortex.Adapters.Connector.Tc3, Version=0.117.1.0, Culture=neutral, PublicKeyToken=dfa781ee5783a74c, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Inxton.Vortex.Adapters.Connector.Tc3.0.117.1-preview.1\lib\netstandard2.0\Vortex.Adapters.Connector.Tc3.dll</HintPath>
@@ -102,6 +109,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StationStatusUpdater.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -11,14 +11,19 @@ VAR
 	{attribute addProperty Name "<#Verl, Germany#>"}
 	Verl : structWeatherStation := (StationICAO := 'EDLP');
 	{attribute addProperty Name "<#Kriva, Slovakia#>"}
-	Kriva : structWeatherStation := (StationICAO := 'LZIB');
-	{attribute wpf [Container(Layout.Stack)]}
-    {attribute addProperty Name "<#What plc says#>"}	
-	PlcCommentOnCurrentWeather : STRING(255) := 'TEST';
+	Kriva : structWeatherStation := (StationICAO := 'LZIB');	
 END_VAR
  ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* PLC IS COMMENTING ON WEATHER, GETTING INFORMATION FROM WEATHER STATIONS FROM ARROUND THE WORLD *)
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="PlcComments" Id="{22dca355-29cb-43b4-8264-e6625ea1cc65}">
+      <Declaration><![CDATA[METHOD PlcComments : STRING[255]
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[(* PLC IS COMMENTING ON WEATHER, GETTING INFORMATION FROM WEATHER STATIONS FROM ARROUND THE WORLD *)
 
 Utils.FluentString.Append('<#So, the weather situation is following#>: $N');
 
@@ -65,44 +70,18 @@ ELSE;
 	Utils.FluentString.Append('<#Kriva station is not available.#>$N');
 END_IF; 
 
-PlcCommentOnCurrentWeather := Utils.FluentString.Result;
+PlcComments := Utils.FluentString.Result;
 
 
 ]]></ST>
-    </Implementation>
+      </Implementation>
+    </Method>
     <LineIds Name="fbWorldWeatherWatch">
-      <LineId Id="74" Count="1" />
-      <LineId Id="27" Count="0" />
-      <LineId Id="57" Count="0" />
-      <LineId Id="40" Count="0" />
-      <LineId Id="9" Count="0" />
-      <LineId Id="28" Count="2" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="58" Count="0" />
-      <LineId Id="61" Count="0" />
-      <LineId Id="60" Count="0" />
-      <LineId Id="33" Count="0" />
-      <LineId Id="59" Count="0" />
-      <LineId Id="34" Count="5" />
-      <LineId Id="65" Count="1" />
-      <LineId Id="64" Count="0" />
-      <LineId Id="72" Count="0" />
-      <LineId Id="62" Count="0" />
-      <LineId Id="32" Count="0" />
-      <LineId Id="41" Count="4" />
-      <LineId Id="67" Count="1" />
-      <LineId Id="63" Count="0" />
-      <LineId Id="73" Count="0" />
-      <LineId Id="69" Count="0" />
-      <LineId Id="47" Count="4" />
-      <LineId Id="46" Count="0" />
-      <LineId Id="70" Count="1" />
-      <LineId Id="53" Count="0" />
-      <LineId Id="52" Count="0" />
-      <LineId Id="31" Count="0" />
-      <LineId Id="54" Count="0" />
-      <LineId Id="56" Count="0" />
       <LineId Id="55" Count="0" />
+    </LineIds>
+    <LineIds Name="fbWorldWeatherWatch.PlcComments">
+      <LineId Id="6" Count="49" />
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

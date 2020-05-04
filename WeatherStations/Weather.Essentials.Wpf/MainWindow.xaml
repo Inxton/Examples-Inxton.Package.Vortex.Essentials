@@ -23,15 +23,15 @@
             Margin="0,24,0,0"
             FontWeight="Bold"
             Foreground="{DynamicResource OnSurface}">
-            INXTON Styling
+            Weather and Styling
         </TextBlock>
         <Grid Margin="10" Style="{DynamicResource Card}">
             <TabControl>
                 <TabItem Header="Generated">
                     <Grid>
-                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations}" PresentationType="Control">
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations}" PresentationType="Control">
                             <vortex:RenderableContentControl.RootContainer>
-                                <UniformGrid Columns="4" Rows="2" />
+                                <UniformGrid Columns="0" Rows="2" Style="{DynamicResource Card}" Margin="10" />
                             </vortex:RenderableContentControl.RootContainer>
                         </vortex:RenderableContentControl>
                     </Grid>
@@ -89,7 +89,7 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="Buttons">
-                    <StackPanel>
+                    <UniformGrid Rows="9" Columns="0">
                         <Button Content="PrimaryTextButtonStyle" Style="{DynamicResource PrimaryTextButtonStyle}" />
                         <Button Content="PrimaryTextButtonOutlineStyle" Style="{DynamicResource PrimaryTextButtonOutlineStyle}" />
                         <Button Content="SecondaryTextButtonStyle" Style="{DynamicResource SecondaryTextButtonStyle}" />
@@ -98,11 +98,15 @@
                         <Button Content="AccentTextButtonOutlineStyle" Style="{DynamicResource AccentTextButtonOutlineStyle}" />
                         <Button Content="AlertTextButtonStyle" Style="{DynamicResource AlertTextButtonStyle}" />
                         <Button Content="AlertTextButtonOutlineStyle" Style="{DynamicResource AlertTextButtonOutlineStyle}" />
-                    </StackPanel>
+                        <Button Content="Overriden Button Style"          Style="{DynamicResource PrimaryTextButtonStyle}">
+                            <Button.Resources>
+                                <Color x:Key="PrimaryColor">Purple</Color>
+                                <SolidColorBrush x:Key="Primary" Color="{StaticResource PrimaryColor}" />
+                            </Button.Resources>
+                        </Button>
+                    </UniformGrid>
                 </TabItem>
-
             </TabControl>
-
         </Grid>
     </StackPanel>
 
