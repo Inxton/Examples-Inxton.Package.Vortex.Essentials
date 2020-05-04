@@ -306,3 +306,73 @@
 2020-04-23 11:30:33.772 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
 2020-04-23 11:30:37.425 +02:00 [INF] Compiling sources 'HansPlc'...
 2020-04-23 11:30:38.209 +02:00 [INF] >>>>>>I, Done
+2020-04-24 13:44:27.035 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-24 13:44:31.766 +02:00 [ERR] >>>>>>"E","","Mal-formed  string literal - cannot find termination symbol.","HansPlc","stContinuousValueLimits","3","36"
+2020-04-24 13:44:31.766 +02:00 [ERR] >>>>>>"E","","Mal-formed  string literal - cannot find termination symbol.","HansPlc","stRecipe","4","36"
+2020-04-24 13:44:31.770 +02:00 [WRN] >>>>>>"W","","Type 'stRecipe' declared in 'HansPlc.RecipeData' is unknown it won't be used. If the type should be known check the reference; letter casing of the type identifier; correct namespace in which the type is located","HansPlc","RecipeData","0","0"
+2020-04-24 13:44:31.954 +02:00 [ERR] >>>>>>"E","","Project HansPlc encountered problem and will not compile. Check for above reported messages","","","0","0"
+2020-04-24 13:44:31.954 +02:00 [INF] >>>>>>I, Done
+2020-04-24 13:46:52.286 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-24 13:46:55.963 +02:00 [ERR] >>>>>>"E","","Mal-formed  string literal - cannot find termination symbol.","HansPlc","stContinuousValueLimits","3","36"
+2020-04-24 13:46:55.964 +02:00 [WRN] >>>>>>"W","","Type 'stContinuousValueLimits' declared in 'HansPlc.stRecipe' is unknown it won't be used. If the type should be known check the reference; letter casing of the type identifier; correct namespace in which the type is located","HansPlc","stRecipe","0","0"
+2020-04-24 13:46:56.120 +02:00 [ERR] >>>>>>"E","","Project HansPlc encountered problem and will not compile. Check for above reported messages","","","0","0"
+2020-04-24 13:46:56.121 +02:00 [INF] >>>>>>I, Done
+2020-04-24 13:47:04.370 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-24 13:47:08.187 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-24 13:47:09.157 +02:00 [INF] >>>>>>I, Done
+2020-04-24 16:31:02.401 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-24 16:31:07.664 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-24 16:31:08.973 +02:00 [INF] >>>>>>I, Done
+2020-04-27 11:04:15.239 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-27 11:04:21.751 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-27 11:04:23.084 +02:00 [INF] >>>>>>I, Done
+2020-04-27 17:19:05.009 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-27 17:19:10.182 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-27 17:19:11.679 +02:00 [INF] >>>>>>I, Done
+2020-04-27 17:21:44.606 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-27 17:21:48.687 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-27 17:21:49.550 +02:00 [INF] >>>>>>I, Done
+2020-04-27 17:22:10.294 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-27 17:22:13.649 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-27 17:22:14.506 +02:00 [INF] >>>>>>I, Done
+2020-04-28 13:34:51.814 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-28 13:34:58.688 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-28 13:35:00.265 +02:00 [INF] >>>>>>I, Done
+2020-04-28 13:38:22.470 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-28 13:38:28.427 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-28 13:38:29.300 +02:00 [INF] >>>>>>I, Done
+2020-04-28 13:38:39.996 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-28 13:38:44.673 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-28 13:38:45.553 +02:00 [INF] >>>>>>I, Done
+2020-04-28 13:40:05.820 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-28 13:40:09.957 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-28 13:40:10.836 +02:00 [INF] >>>>>>I, Done
+2020-04-28 14:01:00.432 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-28 14:01:04.204 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-28 14:01:05.084 +02:00 [INF] >>>>>>I, Done
+2020-04-28 14:02:20.531 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-28 14:02:24.681 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-28 14:02:25.583 +02:00 [INF] >>>>>>I, Done
+2020-04-30 14:20:04.873 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-30 14:20:10.889 +02:00 [ERR] >>>>>>"E","","Syntax error, expected: ,, AT, :","HansPlc","stRecipe","16","0"
+2020-04-30 14:20:10.892 +02:00 [WRN] >>>>>>"W","","Type 'stRecipe' declared in 'HansPlc.RecipeData' is unknown it won't be used. If the type should be known check the reference; letter casing of the type identifier; correct namespace in which the type is located","HansPlc","RecipeData","0","0"
+2020-04-30 14:20:11.306 +02:00 [ERR] >>>>>>"E","","Project HansPlc encountered problem and will not compile. Check for above reported messages","","","0","0"
+2020-04-30 14:20:11.306 +02:00 [INF] >>>>>>I, Done
+2020-04-30 14:20:39.915 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-30 14:20:45.786 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-30 14:20:47.107 +02:00 [INF] >>>>>>I, Done
+2020-04-30 16:34:51.708 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-30 16:34:58.619 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-30 16:35:00.183 +02:00 [INF] >>>>>>I, Done
+2020-04-30 16:38:01.493 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-04-30 16:38:06.549 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-04-30 16:38:07.784 +02:00 [INF] >>>>>>I, Done
+2020-05-04 08:34:23.249 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-05-04 08:34:31.489 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-05-04 08:34:33.146 +02:00 [INF] >>>>>>I, Done
+2020-05-04 08:49:26.344 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-05-04 08:49:30.906 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-05-04 08:49:32.012 +02:00 [INF] >>>>>>I, Done
+2020-05-04 08:52:49.276 +02:00 [INF] Builder version : 0.117.0.0 / 0.117.0-preview.1+Branch.tags/0.117.0-preview.1.Sha.8b11852095bfe72b624c90fef52d03f41ea4a922
+2020-05-04 08:52:53.689 +02:00 [INF] Compiling sources 'HansPlc'...
+2020-05-04 08:52:54.716 +02:00 [INF] >>>>>>I, Done

@@ -9,8 +9,6 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Vortex.Presentation.Styling.Wpf;component/VortexStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
-
         </ResourceDictionary>
     </Application.Resources>
 </Application>

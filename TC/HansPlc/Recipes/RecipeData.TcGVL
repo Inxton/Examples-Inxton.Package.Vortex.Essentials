@@ -3,7 +3,7 @@
   <GVL Name="RecipeData" Id="{85d83d85-d465-4f76-87be-7e1042ff0a51}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
-	_reciepe : stReciepe;
+	_recipe : stRecipe;
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

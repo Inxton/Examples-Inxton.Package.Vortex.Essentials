@@ -30,7 +30,7 @@
     <Compile Include="Recipes\stContinuousValueLimits.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Recipes\stReciepe.TcDUT">
+    <Compile Include="Recipes\stRecipe.TcDUT">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="_Utils\fbFluentString.TcPOU">
