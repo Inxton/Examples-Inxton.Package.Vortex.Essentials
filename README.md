@@ -9,6 +9,8 @@ In this repository, you'll find examples that aim o present some key features of
 
 ## Recipes
 
+We will create a simple recipe control like this.
+![recipe managemnet](./assets/recipe_mgmt.gif)
 This example shows an example of Recipe user control that stores, retrieves, uploads, and keeps track of changes.
 
 ~~~ XML

@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HansPlcConnector", "HansPlcConnector\HansPlcConnector.csproj", "{9AE6BC87-464C-4B4A-AD99-596B9F167676}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeatherStations", "WeatherStations", "{B75D49D5-B125-4419-90F1-7C4FB2314A38}"
+	ProjectSection(SolutionItems) = preProject
+		WeatherStations\README.md = WeatherStations\README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Connector", "_Connector", "{757990E4-F6CE-41F1-A0AC-27FAEDEB0B4D}"
 EndProject
@@ -146,7 +149,7 @@ Global
 		{FA579FBB-12E8-4E6C-9CD6-6CB015173377} = {F13DC6FD-16BE-4678-9EEB-22F9654E1971}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_PrefixTranslations = False
 		SolutionGuid = {86F1AB36-9A8F-42AD-8F42-D078EDF6998B}
+		RESX_PrefixTranslations = False
 	EndGlobalSection
 EndGlobal
