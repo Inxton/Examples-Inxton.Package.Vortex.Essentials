@@ -422,3 +422,59 @@
 2020-05-04 14:53:07.159 +02:00 [INF] Building project 'HansPlc.HansPlc'
 2020-05-04 14:53:07.160 +02:00 [INF] Installing project libraries into project 'HansPlc'
 2020-05-04 14:53:07.583 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-05 10:29:15.288 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-05 10:29:15.531 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-05 10:29:15.531 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-05 10:29:15.652 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-05 11:00:38.812 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-05 11:00:39.063 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-05 11:00:39.064 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-05 11:00:39.223 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-05 11:01:27.851 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-05 11:01:28.098 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-05 11:01:28.099 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-05 11:01:28.233 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-05 11:01:52.150 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-05 11:01:52.392 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-05 11:01:52.393 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-05 11:01:52.525 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-05 15:46:40.291 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-05 15:46:40.711 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-05 15:46:40.712 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-05 15:46:40.913 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 12:33:57.067 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 12:33:57.375 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 12:33:57.376 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 12:33:57.523 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 13:07:23.268 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 13:07:23.533 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 13:07:23.534 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 13:07:23.791 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 13:18:43.708 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 13:18:44.144 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 13:18:44.146 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 13:18:44.646 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 13:24:00.638 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 13:24:00.996 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 13:24:00.997 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 13:24:01.490 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 13:26:06.402 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 13:26:06.951 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 13:26:06.952 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 13:26:07.288 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 13:27:11.181 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 13:27:11.590 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 13:27:11.591 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 13:27:11.871 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 13:28:35.883 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 13:28:36.385 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 13:28:36.389 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 13:28:37.033 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 14:59:36.240 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 14:59:36.497 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 14:59:36.498 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 14:59:36.660 +02:00 [INF] Updating project HansPlc.HansPlc
+2020-05-06 15:00:10.700 +02:00 [INF] Opening solution: C:\MTS\Develop\foxtroth\github\Examples-Inxton.Package.Vortex.Essentials\Inxton.Vortex.Essentials.Examples.sln
+2020-05-06 15:00:10.908 +02:00 [INF] Building project 'HansPlc.HansPlc'
+2020-05-06 15:00:10.909 +02:00 [INF] Installing project libraries into project 'HansPlc'
+2020-05-06 15:00:11.045 +02:00 [INF] Updating project HansPlc.HansPlc

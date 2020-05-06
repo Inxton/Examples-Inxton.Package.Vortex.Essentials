@@ -295,12 +295,16 @@ namespace HansPlc
 			Symbol = Vortex.Connector.IConnector.CreateSymbol(parent.Symbol, symbolTail);
 			_NorthPole = new structWeatherStation(this, "<#North pole station#>", "NorthPole");
 			_NorthPole.AttributeName = "<#North pole station#>";
+			_NorthPole.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=74.652&mlon=-95.556#map=6/74.652/-95.556";
 			_SouthPole = new structWeatherStation(this, "<#South pole station#>", "SouthPole");
 			_SouthPole.AttributeName = "<#South pole station#>";
+			_SouthPole.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=-85.05113&mlon=-16.80701#map=1/-85.05113/-16.80701";
 			_Verl = new structWeatherStation(this, "<#Verl, Germany#>", "Verl");
 			_Verl.AttributeName = "<#Verl, Germany#>";
+			_Verl.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=51.5799&mlon=8.415#map=6/51.5799/8.4155";
 			_Kriva = new structWeatherStation(this, "<#Kriva, Slovakia#>", "Kriva");
 			_Kriva.AttributeName = "<#Kriva, Slovakia#>";
+			_Kriva.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=48.1723&mlon=17.2158#map=6/48.1723/17.2158";
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -311,12 +315,16 @@ namespace HansPlc
 			PexPreConstructorParameterless();
 			_NorthPole = new structWeatherStation();
 			_NorthPole.AttributeName = "<#North pole station#>";
+			_NorthPole.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=74.652&mlon=-95.556#map=6/74.652/-95.556";
 			_SouthPole = new structWeatherStation();
 			_SouthPole.AttributeName = "<#South pole station#>";
+			_SouthPole.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=-85.05113&mlon=-16.80701#map=1/-85.05113/-16.80701";
 			_Verl = new structWeatherStation();
 			_Verl.AttributeName = "<#Verl, Germany#>";
+			_Verl.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=51.5799&mlon=8.415#map=6/51.5799/8.4155";
 			_Kriva = new structWeatherStation();
 			_Kriva.AttributeName = "<#Kriva, Slovakia#>";
+			_Kriva.AttributeOpenMap = "https://www.openstreetmap.org/?mlat=48.1723&mlon=17.2158#map=6/48.1723/17.2158";
 			AttributeName = "";
 			PexConstructorParameterless();
 		}

@@ -154,6 +154,11 @@ namespace HansPlc
         {
             try
             {
+                if(string.IsNullOrEmpty(Recipe._recipeName.Value))
+                {
+                    throw new InvalidOperationException("The recipe name must not be empty");
+                }
+
                 using (var streamWriter = new System.IO.StreamWriter(GetRecipeFileFullPath(GetRecipeFileName(Recipe._recipeName.Value))))
                 {
                     var plain = Recipe.CreatePlainerType();

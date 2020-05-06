@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HansPlc;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,9 @@ namespace Weather.Essentials.Wpf
     /// </summary>
     public partial class App : Application
     {
+        public App() : base()
+        {
+            Entry.HansPlc.Connector.BuildAndStart();
+        }
     }
 }

@@ -75,11 +75,9 @@ private void DisplayDataMode()
 
 ~~~
 
-
 ### Quickly explore auto-generated items
 
 In order to quickly check the way, the recipe system will scale uncomment the code in ```stRecipe``` structure. Run the compiler, load program to the PLC, and run the application. You should get the result shown below.
-
 
 **Prior to modification**
 
@@ -101,7 +99,7 @@ END_STRUCT
 END_TYPE
 ~~~
 
-![Inxton logo](./assets/recipe_00.png)
+![Recipes before](./assets/recipe_00.png)
 
 
 **After modification**
@@ -113,7 +111,7 @@ STRUCT
     _recipeName : STRING;
     {attribute addProperty Name "<#Description#>"}
     _description : STRING(255);
-    {attribute addProperty Name "<#Lenght#> [mm]"}
+    {attribute addProperty Name "<#Length#> [mm]"}
     _lenght : stContinuousValueLimits;
     {attribute addProperty Name "<#Height#> [mm]"}
     _height : stContinuousValueLimits;
@@ -123,7 +121,13 @@ END_STRUCT
 END_TYPE
 ~~~
 
-![Inxton logo](./assets/recipe_01.png)
+![Recipes after](./assets/recipe_01.png)
+
+## Weather stations
+
+This example is described [here](https://github.com/Inxton/Inxton.Package.Vortex.Essentials#how-to-generate-ui)
+
+It show the customization option when auto-generating the UI/HMI.
 
 # License
 
@@ -134,8 +138,6 @@ To make our lawyers happy - read the whole license agreement [here](https://gith
 
 
 ## What to do next?
-
-Try [Weather stations example](./WeatherStations/README.md)
 
 Check out the [Inxton.Package.Vortex.Core](https://github.com/Inxton/Inxton.Package.Vortex.Core) documentation
 

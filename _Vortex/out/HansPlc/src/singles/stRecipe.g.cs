@@ -80,113 +80,26 @@ namespace HansPlc
 			}
 		}
 
-		stContinuousValueLimits __lenght;
-		public stContinuousValueLimits _lenght
-		{
-			get
-			{
-				return __lenght;
-			}
-		}
-
-		IstContinuousValueLimits IstRecipe._lenght
-		{
-			get
-			{
-				return _lenght;
-			}
-		}
-
-		IShadowstContinuousValueLimits IShadowstRecipe._lenght
-		{
-			get
-			{
-				return _lenght;
-			}
-		}
-
-		stContinuousValueLimits __height;
-		public stContinuousValueLimits _height
-		{
-			get
-			{
-				return __height;
-			}
-		}
-
-		IstContinuousValueLimits IstRecipe._height
-		{
-			get
-			{
-				return _height;
-			}
-		}
-
-		IShadowstContinuousValueLimits IShadowstRecipe._height
-		{
-			get
-			{
-				return _height;
-			}
-		}
-
-		stContinuousValueLimits __thikness;
-		public stContinuousValueLimits _thikness
-		{
-			get
-			{
-				return __thikness;
-			}
-		}
-
-		IstContinuousValueLimits IstRecipe._thikness
-		{
-			get
-			{
-				return _thikness;
-			}
-		}
-
-		IShadowstContinuousValueLimits IShadowstRecipe._thikness
-		{
-			get
-			{
-				return _thikness;
-			}
-		}
-
 		public void LazyOnlineToShadow()
 		{
 			_recipeName.Shadow = _recipeName.LastValue;
 			_description.Shadow = _description.LastValue;
-			_lenght.LazyOnlineToShadow();
-			_height.LazyOnlineToShadow();
-			_thikness.LazyOnlineToShadow();
 		}
 
 		public void LazyShadowToOnline()
 		{
 			_recipeName.Cyclic = _recipeName.Shadow;
 			_description.Cyclic = _description.Shadow;
-			_lenght.LazyShadowToOnline();
-			_height.LazyShadowToOnline();
-			_thikness.LazyShadowToOnline();
 		}
 
 		public PlainstRecipe CreatePlainerType()
 		{
 			var cloned = new PlainstRecipe();
-			cloned._lenght = _lenght.CreatePlainerType();
-			cloned._height = _height.CreatePlainerType();
-			cloned._thikness = _thikness.CreatePlainerType();
 			return cloned;
 		}
 
 		protected PlainstRecipe CreatePlainerType(PlainstRecipe cloned)
 		{
-			cloned._lenght = _lenght.CreatePlainerType();
-			cloned._height = _height.CreatePlainerType();
-			cloned._thikness = _thikness.CreatePlainerType();
 			return cloned;
 		}
 
@@ -321,12 +234,6 @@ namespace HansPlc
 			_recipeName.AttributeName = "<#Recipe name#>";
 			__description = @Connector.Online.Adapter.CreateSTRING(this, "<#Description#>", "_description");
 			_description.AttributeName = "<#Description#>";
-			__lenght = new stContinuousValueLimits(this, "<#Length#> [mm]", "_lenght");
-			__lenght.AttributeName = "<#Length#> [mm]";
-			__height = new stContinuousValueLimits(this, "<#Height#> [mm]", "_height");
-			__height.AttributeName = "<#Height#> [mm]";
-			__thikness = new stContinuousValueLimits(this, "<#Thickness#> [mm]", "_thikness");
-			__thikness.AttributeName = "<#Thickness#> [mm]";
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -339,12 +246,6 @@ namespace HansPlc
 			_recipeName.AttributeName = "<#Recipe name#>";
 			__description = Vortex.Connector.IConnectorFactory.CreateSTRING();
 			_description.AttributeName = "<#Description#>";
-			__lenght = new stContinuousValueLimits();
-			__lenght.AttributeName = "<#Length#> [mm]";
-			__height = new stContinuousValueLimits();
-			__height.AttributeName = "<#Height#> [mm]";
-			__thikness = new stContinuousValueLimits();
-			__thikness.AttributeName = "<#Thickness#> [mm]";
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -376,21 +277,6 @@ namespace HansPlc
 			get;
 		}
 
-		IstContinuousValueLimits _lenght
-		{
-			get;
-		}
-
-		IstContinuousValueLimits _height
-		{
-			get;
-		}
-
-		IstContinuousValueLimits _thikness
-		{
-			get;
-		}
-
 		System.String AttributeName
 		{
 			get;
@@ -415,21 +301,6 @@ namespace HansPlc
 		}
 
 		Vortex.Connector.ValueTypes.Shadows.IShadowString _description
-		{
-			get;
-		}
-
-		IShadowstContinuousValueLimits _lenght
-		{
-			get;
-		}
-
-		IShadowstContinuousValueLimits _height
-		{
-			get;
-		}
-
-		IShadowstContinuousValueLimits _thikness
 		{
 			get;
 		}
@@ -479,55 +350,10 @@ namespace HansPlc
 			}
 		}
 
-		PlainstContinuousValueLimits __lenght;
-		public PlainstContinuousValueLimits _lenght
-		{
-			get
-			{
-				return __lenght;
-			}
-
-			set
-			{
-				__lenght = value;
-			}
-		}
-
-		PlainstContinuousValueLimits __height;
-		public PlainstContinuousValueLimits _height
-		{
-			get
-			{
-				return __height;
-			}
-
-			set
-			{
-				__height = value;
-			}
-		}
-
-		PlainstContinuousValueLimits __thikness;
-		public PlainstContinuousValueLimits _thikness
-		{
-			get
-			{
-				return __thikness;
-			}
-
-			set
-			{
-				__thikness = value;
-			}
-		}
-
 		public void CopyPlainToCyclic(HansPlc.stRecipe target)
 		{
 			target._recipeName.Cyclic = _recipeName;
 			target._description.Cyclic = _description;
-			_lenght.CopyPlainToCyclic(target._lenght);
-			_height.CopyPlainToCyclic(target._height);
-			_thikness.CopyPlainToCyclic(target._thikness);
 		}
 
 		public void CopyPlainToCyclic(HansPlc.IstRecipe target)
@@ -539,9 +365,6 @@ namespace HansPlc
 		{
 			target._recipeName.Shadow = _recipeName;
 			target._description.Shadow = _description;
-			_lenght.CopyPlainToShadow(target._lenght);
-			_height.CopyPlainToShadow(target._height);
-			_thikness.CopyPlainToShadow(target._thikness);
 		}
 
 		public void CopyPlainToShadow(HansPlc.IShadowstRecipe target)
@@ -553,9 +376,6 @@ namespace HansPlc
 		{
 			_recipeName = source._recipeName.LastValue;
 			_description = source._description.LastValue;
-			_lenght.CopyCyclicToPlain(source._lenght);
-			_height.CopyCyclicToPlain(source._height);
-			_thikness.CopyCyclicToPlain(source._thikness);
 		}
 
 		public void CopyCyclicToPlain(HansPlc.IstRecipe source)
@@ -567,9 +387,6 @@ namespace HansPlc
 		{
 			_recipeName = source._recipeName.Shadow;
 			_description = source._description.Shadow;
-			_lenght.CopyShadowToPlain(source._lenght);
-			_height.CopyShadowToPlain(source._height);
-			_thikness.CopyShadowToPlain(source._thikness);
 		}
 
 		public void CopyShadowToPlain(HansPlc.IShadowstRecipe source)
@@ -579,9 +396,6 @@ namespace HansPlc
 
 		public PlainstRecipe()
 		{
-			__lenght = new PlainstContinuousValueLimits();
-			__height = new PlainstContinuousValueLimits();
-			__thikness = new PlainstContinuousValueLimits();
 		}
 	}
 }

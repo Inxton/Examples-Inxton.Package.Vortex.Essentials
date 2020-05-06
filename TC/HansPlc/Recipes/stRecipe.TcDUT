@@ -8,12 +8,12 @@ STRUCT
 	{attribute addProperty Name "<#Description#>"}
 	_description : STRING(255);
 	// Uncomment following lines run the compiler and check that the fiels are added to the UI, and you can save and retrieve the newly added variables.
-	{attribute addProperty Name "<#Length#> [mm]"}		
+	(*{attribute addProperty Name "<#Length#> [mm]"}		
 	_lenght : stContinuousValueLimits;	
 	{attribute addProperty Name "<#Height#> [mm]"}
 	_height : stContinuousValueLimits;
 	{attribute addProperty Name "<#Thickness#> [mm]"}
-	_thikness : stContinuousValueLimits;	
+	_thikness : stContinuousValueLimits;*)	
 END_STRUCT
 END_TYPE
 ]]></Declaration>

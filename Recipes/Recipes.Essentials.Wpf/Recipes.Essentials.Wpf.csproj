@@ -81,14 +81,14 @@
     <Reference Include="Vortex.Framework.Abstractions, Version=0.120.0.0, Culture=neutral, PublicKeyToken=9f2602fd14098343, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Inxton.Vortex.Framework.Abstractions.0.120.0-preview.1\lib\netstandard2.0\Vortex.Framework.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Vortex.Presentation.Controls.Wpf, Version=0.120.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Inxton.Vortex.Presentation.Controls.Wpf.0.120.1-alpha.6\lib\net48\Vortex.Presentation.Controls.Wpf.dll</HintPath>
+    <Reference Include="Vortex.Presentation.Controls.Wpf, Version=0.120.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Inxton.Vortex.Presentation.Controls.Wpf.0.120.2-preview.0\lib\net48\Vortex.Presentation.Controls.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Vortex.Presentation.Styling.Wpf, Version=0.120.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Inxton.Vortex.Presentation.Styling.Wpf.0.120.1-alpha.6\lib\net48\Vortex.Presentation.Styling.Wpf.dll</HintPath>
+    <Reference Include="Vortex.Presentation.Styling.Wpf, Version=0.120.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Inxton.Vortex.Presentation.Styling.Wpf.0.120.2-preview.0\lib\net48\Vortex.Presentation.Styling.Wpf.dll</HintPath>
     </Reference>
-    <Reference Include="Vortex.Presentation.Wpf, Version=0.120.1.0, Culture=neutral, PublicKeyToken=9f2602fd14098343, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Inxton.Vortex.Presentation.Wpf.0.120.1-alpha.6\lib\net48\Vortex.Presentation.Wpf.dll</HintPath>
+    <Reference Include="Vortex.Presentation.Wpf, Version=0.120.2.0, Culture=neutral, PublicKeyToken=9f2602fd14098343, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Inxton.Vortex.Presentation.Wpf.0.120.2-preview.0\lib\net48\Vortex.Presentation.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore">
@@ -143,7 +143,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <DUT Name="structWeatherStation" Id="{262a73db-d55b-467b-88e5-ec729c52b493}">
     <Declaration><![CDATA[{attribute wpf [Container(Layout.Stack)]}
+{attribute addProperty OpenMap "https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791"}
 TYPE structWeatherStation :
 STRUCT
 	{attribute addProperty Name "<#Station name (ICAO)#>"}	

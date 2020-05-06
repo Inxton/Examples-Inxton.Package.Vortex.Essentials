@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:Weather.Essentials.Wpf"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vortex="http://vortex.mts/xaml"
+    xmlns:hansplc="clr-namespace:HansPlc"
     Title="MainWindow"
     Width="800"
     Height="450"
@@ -28,13 +29,38 @@
         <Grid Margin="10" Style="{DynamicResource Card}">
             <TabControl>
                 <TabItem Header="Generated">
-                    <Grid>
+                    <Grid ToolTip="This is fully auto generated UI down the primitive types.">
                         <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations}" PresentationType="Control">
                             <vortex:RenderableContentControl.RootContainer>
                                 <UniformGrid Columns="0" Rows="2" Style="{DynamicResource Card}" Margin="10" />
                             </vortex:RenderableContentControl.RootContainer>
                         </vortex:RenderableContentControl>
                     </Grid>
+                </TabItem>
+                <TabItem Header="Map View" ToolTip="This is auto generated UI down to customized rapresentation of the strucWeatherStationMapView">
+                    <ItemsControl ItemsSource="{Binding PLC.prgWeatherStations._weatherStations.WeatherStations}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="4" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <ContentControl>
+                                    <vortex:RenderableContentControl DataContext="{Binding}" PresentationType="Map"/>
+                                </ContentControl>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </TabItem>
+                <TabItem Header="Customized views" ToolTip="This is auto generated UI down to customized rapresentation of the each single object.">
+                    <UniformGrid Columns="4">
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.NorthPole}" PresentationType="NorthPole"></vortex:RenderableContentControl>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.Verl}" PresentationType="Verl"></vortex:RenderableContentControl>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.Kriva}" PresentationType="Kriva"></vortex:RenderableContentControl>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.SouthPole}" PresentationType="SouthPole"></vortex:RenderableContentControl>
+                    </UniformGrid>
                 </TabItem>
                 <TabItem Header="Signals and cards">
                     <Grid>

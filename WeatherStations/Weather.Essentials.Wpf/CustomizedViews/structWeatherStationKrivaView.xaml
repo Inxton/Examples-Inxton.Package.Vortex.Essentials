@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="HansPlc.structWeatherStationKrivaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HansPlc"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <Grid>
+        <GroupBox Header="{Binding StationICAO.Cyclic}" Margin="10">
+            <StackPanel>
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    FontSize="15"
+                    FontWeight="Bold"
+                    Text="{Binding Temp.Cyclic, StringFormat={}Temparature: {0}°C}" />
+                <WebBrowser
+                    x:Name="Map"
+                    Width="400"
+                    Height="400"/>
+                <Image Source="/Weather.Essentials.Wpf;component/assets/400px-Coat_of_arms_of_Slovakia.svg.png" Width="100" Margin="10" ></Image>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</UserControl>

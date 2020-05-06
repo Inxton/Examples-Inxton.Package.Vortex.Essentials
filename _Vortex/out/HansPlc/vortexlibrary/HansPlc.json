@@ -31,7 +31,7 @@
       "TypeMetaInfo": 1
     },
     {
-      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeAttributes": "\n{attribute addProperty OpenMap \"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\" }\n{attribute addProperty Name \"\" }",
       "TypeName": "structWeatherStation",
       "Namespace": "HansPlc",
       "TypeMetaInfo": 1
