@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:Weather.Essentials.Wpf"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vortex="http://vortex.mts/xaml"
+    xmlns:hansplc="clr-namespace:HansPlc"
     Title="MainWindow"
     Width="800"
     Height="450"
@@ -20,16 +21,50 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             FontSize="25"
+            Margin="0,24,0,0"
             FontWeight="Bold"
             Foreground="{DynamicResource OnSurface}">
-            INXTON Styling
+            Weather and Styling
         </TextBlock>
         <Grid Margin="10" Style="{DynamicResource Card}">
             <TabControl>
+                <TabItem Header="Generated">
+                    <Grid ToolTip="This is fully auto generated UI down the primitive types.">
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations}" PresentationType="Control">
+                            <vortex:RenderableContentControl.RootContainer>
+                                <UniformGrid Columns="0" Rows="2" Style="{DynamicResource Card}" Margin="10" />
+                            </vortex:RenderableContentControl.RootContainer>
+                        </vortex:RenderableContentControl>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Map View" ToolTip="This is auto generated UI down to customized rapresentation of the strucWeatherStationMapView">
+                    <ItemsControl ItemsSource="{Binding PLC.prgWeatherStations._weatherStations.WeatherStations}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="4" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <ContentControl>
+                                    <vortex:RenderableContentControl DataContext="{Binding}" PresentationType="Map"/>
+                                </ContentControl>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </TabItem>
+                <TabItem Header="Customized views" ToolTip="This is auto generated UI down to customized rapresentation of the each single object.">
+                    <UniformGrid Columns="4">
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.NorthPole}" PresentationType="NorthPole"></vortex:RenderableContentControl>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.Verl}" PresentationType="Verl"></vortex:RenderableContentControl>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.Kriva}" PresentationType="Kriva"></vortex:RenderableContentControl>
+                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations.SouthPole}" PresentationType="SouthPole"></vortex:RenderableContentControl>
+                    </UniformGrid>
+                </TabItem>
                 <TabItem Header="Signals and cards">
                     <Grid>
                         <WrapPanel>
-
                             <StackPanel
                                 Margin="10"
                                 Orientation="Horizontal"
@@ -80,7 +115,7 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="Buttons">
-                    <StackPanel>
+                    <UniformGrid Rows="9" Columns="0">
                         <Button Content="PrimaryTextButtonStyle" Style="{DynamicResource PrimaryTextButtonStyle}" />
                         <Button Content="PrimaryTextButtonOutlineStyle" Style="{DynamicResource PrimaryTextButtonOutlineStyle}" />
                         <Button Content="SecondaryTextButtonStyle" Style="{DynamicResource SecondaryTextButtonStyle}" />
@@ -89,21 +124,15 @@
                         <Button Content="AccentTextButtonOutlineStyle" Style="{DynamicResource AccentTextButtonOutlineStyle}" />
                         <Button Content="AlertTextButtonStyle" Style="{DynamicResource AlertTextButtonStyle}" />
                         <Button Content="AlertTextButtonOutlineStyle" Style="{DynamicResource AlertTextButtonOutlineStyle}" />
-                    </StackPanel>
-                </TabItem>
-                <TabItem Header="Generated">
-                    <Grid>
-                        <vortex:RenderableContentControl DataContext="{Binding PLC.prgWeatherStations._weatherStations}" PresentationType="Control">
-                            <vortex:RenderableContentControl.RootContainer>
-                                <UniformGrid Columns="4" Rows="2">
-
-                                </UniformGrid>
-                            </vortex:RenderableContentControl.RootContainer>
-                        </vortex:RenderableContentControl>
-                    </Grid>
+                        <Button Content="Overriden Button Style"          Style="{DynamicResource PrimaryTextButtonStyle}">
+                            <Button.Resources>
+                                <Color x:Key="PrimaryColor">Purple</Color>
+                                <SolidColorBrush x:Key="Primary" Color="{StaticResource PrimaryColor}" />
+                            </Button.Resources>
+                        </Button>
+                    </UniformGrid>
                 </TabItem>
             </TabControl>
-
         </Grid>
     </StackPanel>
 

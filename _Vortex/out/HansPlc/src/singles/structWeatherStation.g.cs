@@ -8,7 +8,7 @@ using Vortex.Connector.Identity;
 namespace HansPlc
 {
 	[Container(Layout.Stack)]
-	[Vortex.Connector.Attributes.TypeMetaDescriptorAttribute("{attribute addProperty Name \"\" }", "structWeatherStation", "HansPlc", TypeComplexityEnum.Complex)]
+	[Vortex.Connector.Attributes.TypeMetaDescriptorAttribute("{attribute addProperty OpenMap \"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\" } {attribute addProperty Name \"\" }", "structWeatherStation", "HansPlc", TypeComplexityEnum.Complex)]
 	public partial class structWeatherStation : Vortex.Connector.IVortexObject, IstructWeatherStation, IShadowstructWeatherStation, Vortex.Connector.IVortexOnlineObject, Vortex.Connector.IVortexShadowObject
 	{
 		public string Symbol
@@ -367,6 +367,25 @@ namespace HansPlc
 			return this.SymbolTail;
 		}
 
+		public System.String AttributeOpenMap
+		{
+			get
+			{
+				return HansPlcTwinController.Translator.Translate(_AttributeOpenMap).Interpolate(this);
+			}
+
+			set
+			{
+				_AttributeOpenMap = value;
+			}
+		}
+
+		private System.String _AttributeOpenMap
+		{
+			get;
+			set;
+		}
+
 		public System.String AttributeName
 		{
 			get
@@ -418,6 +437,7 @@ namespace HansPlc
 			_WindSpeed = @Connector.Online.Adapter.CreateREAL(this, "<#Wind speed#>", "WindSpeed");
 			WindSpeed.AttributeName = "<#Wind speed#>";
 			WindSpeed.AttributeUnits = "m/s";
+			AttributeOpenMap = "https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791";
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -448,6 +468,7 @@ namespace HansPlc
 			_WindSpeed = Vortex.Connector.IConnectorFactory.CreateREAL();
 			WindSpeed.AttributeName = "<#Wind speed#>";
 			WindSpeed.AttributeUnits = "m/s";
+			AttributeOpenMap = "https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791";
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -510,6 +531,11 @@ namespace HansPlc
 			get;
 		}
 
+		System.String AttributeOpenMap
+		{
+			get;
+		}
+
 		System.String AttributeName
 		{
 			get;
@@ -565,6 +591,11 @@ namespace HansPlc
 		}
 
 		Vortex.Connector.ValueTypes.Shadows.IShadowReal WindSpeed
+		{
+			get;
+		}
+
+		System.String AttributeOpenMap
 		{
 			get;
 		}

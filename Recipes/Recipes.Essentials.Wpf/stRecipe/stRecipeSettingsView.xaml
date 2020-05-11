@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="HansPlc.stRecipeSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"              
+             xmlns:hansplc="clr-namespace:HansPlc"
+             xmlns:vortex="http://vortex.mts/xaml"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <d:UserControl.DataContext>
+        <hansplc:stRecipeSettingsViewModel/>
+    </d:UserControl.DataContext>
+    <TabControl>
+        <TabItem Header="Recipe settings">
+            <Grid Margin="10" Style="{DynamicResource Card}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ComboBox Grid.Row="0" 
+                  ItemsSource="{Binding RecipesList, Mode=OneWay}"                   
+                  Tag="Recipes"                   
+                  SelectedItem="{Binding SelectedRecipeName}" 
+                  Margin="0,10,0,0"
+                  Visibility="{Binding LockRecipeSelection, Converter={hansplc:BooleanToVisibilityInvertedConverter}}"/>
+                <GroupBox Header="Data"
+                  Grid.Row="1"
+                  Margin="5">
+                    <ScrollViewer>
+                        <ContentControl Content="{Binding DataPresentation}"/>
+                    </ScrollViewer>
+                </GroupBox>
+                <WrapPanel Grid.Row="2" HorizontalAlignment="Center">
+                    <Button Content="New" Command="{Binding CreateNewCommand}"></Button>
+                    <Button Content="Edit" Command="{Binding EditCommand}"></Button>
+                    <Button Content="Save" Command="{Binding SaveCommand}"></Button>
+                    <Button Content="Cancel" Command="{Binding StopEditingCommand}"></Button>
+                    <Button Content="Send to plc" Command="{Binding SendToPlcCommand}"></Button>
+                    <Button Content="Delete" Command="{Binding DeleteRecordCommand}"/>
+                    <Button Content="Open log file" Command="{Binding OpenLogFileCommand}"></Button>
+                </WrapPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Current plc data">
+            <Grid Style="{DynamicResource Card}" 
+                  Margin="10">
+                <vortex:RenderableContentControl DataContext="{Binding Recipe}" PresentationType="Display"></vortex:RenderableContentControl>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</UserControl>

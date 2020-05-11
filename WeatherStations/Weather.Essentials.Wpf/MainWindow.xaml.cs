@@ -9,14 +9,14 @@ namespace Weather.Essentials.Wpf
         {
             InitializeComponent();
             DataContext = new MainWindowViewModel();
+            StationStatusUpdater.Get.WriteWeatherStationData();
         }
     }
 
     public class MainWindowViewModel
     {
         public MainWindowViewModel()
-        {
-            Entry.HansPlc.Connector.BuildAndStart();
+        {          
             PLC = Entry.HansPlc;
         }
         public HansPlcTwinController PLC { get; }

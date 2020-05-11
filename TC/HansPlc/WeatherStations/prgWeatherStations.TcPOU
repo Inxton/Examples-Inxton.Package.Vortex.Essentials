@@ -2,17 +2,24 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
   <POU Name="prgWeatherStations" Id="{63837f3c-745d-4340-ad1b-7cd9b6b37ded}" SpecialFunc="None">
     <Declaration><![CDATA[{attribute addProperty Name "Program"}
+{attribute wpf [Container(Layout.Stack)]}
 PROGRAM prgWeatherStations
 VAR	
 	{attribute addProperty Name "Weather Cyclic"}
 	_weatherStations : fbWorldWeatherWatch;	
+	{attribute wpf [Container(Layout.Stack)]}
+	{attribute wpf [Group(Layout.GroupBox)]}
+    {attribute addProperty Name "<#What plc says#>"}	
+	PlcCommentOnCurrentWeather : STRING(255) := 'TEST';	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[_weatherStations();	]]></ST>
+      <ST><![CDATA[_weatherStations();	
+PlcCommentOnCurrentWeather := _weatherStations.PlcComments();]]></ST>
     </Implementation>
     <LineIds Name="prgWeatherStations">
       <LineId Id="24" Count="0" />
+      <LineId Id="36" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
