@@ -123,6 +123,11 @@ END_TYPE
 
 ![Recipes after](./assets/recipe_01.png)
 
+What how to video
+
+[![Video instruction here](https://img.youtube.com/vi/4dS3-CfezO8/0.jpg)](https://www.youtube.com/watch?v=4dS3-CfezO8&feature=youtu.be "Run builder.")
+
+
 ## Weather stations
 
 This example is described [here](https://github.com/Inxton/Inxton.Package.Vortex.Essentials#how-to-generate-ui)
