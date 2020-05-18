@@ -6,7 +6,7 @@ using Vortex.Connector.ValueTypes;
 using Vortex.Connector.Identity;
 using HansPlcConnector.Properties;
 
-[assembly: Vortex.Connector.Attributes.AssemblyPlcCounterPart("{\r\n  \"Types\": [\r\n    {\r\n      \"TypeAttributes\": \"\",\r\n      \"TypeName\": \"enumStationStatus\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 5\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbFluentString\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbWorldWeatherWatch\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stContinuousValueLimits\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stRecipe\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty OpenMap \\\"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\\\" }\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"structWeatherStation\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"RecipeData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"Utils\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"MAIN\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"Program\\\" }\",\r\n      \"TypeName\": \"prgWeatherStations\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    }\r\n  ],\r\n  \"Name\": \"HansPlc\",\r\n  \"Namespace\": \"HansPlc\"\r\n}")]
+[assembly: Vortex.Connector.Attributes.AssemblyPlcCounterPart("{\r\n  \"Types\": [\r\n    {\r\n      \"TypeAttributes\": \"\",\r\n      \"TypeName\": \"enumStationStatus\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 5\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbInfluxPerformanceLogging\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbFluentString\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbWorldWeatherWatch\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"InfluxData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stContinuousValueLimits\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stRecipe\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty OpenMap \\\"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\\\" }\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"structWeatherStation\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"RecipeData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"Utils\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"prgInflux\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"MAIN\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"Program\\\" }\",\r\n      \"TypeName\": \"prgWeatherStations\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    }\r\n  ],\r\n  \"Name\": \"HansPlc\",\r\n  \"Namespace\": \"HansPlc\"\r\n}")]
 namespace HansPlc
 {
 	public partial class HansPlcTwinController : Vortex.Connector.ITwinController, IHansPlcTwinController, IShadowHansPlcTwinController
@@ -81,6 +81,31 @@ namespace HansPlc
 			}
 		}
 
+		prgInflux _prgInflux;
+		public prgInflux prgInflux
+		{
+			get
+			{
+				return _prgInflux;
+			}
+		}
+
+		IprgInflux IHansPlcTwinController.prgInflux
+		{
+			get
+			{
+				return prgInflux;
+			}
+		}
+
+		IShadowprgInflux IShadowHansPlcTwinController.prgInflux
+		{
+			get
+			{
+				return prgInflux;
+			}
+		}
+
 		MAIN _MAIN;
 		public MAIN MAIN
 		{
@@ -135,6 +160,7 @@ namespace HansPlc
 		{
 			RecipeData.LazyOnlineToShadow();
 			Utils.LazyOnlineToShadow();
+			prgInflux.LazyOnlineToShadow();
 			MAIN.LazyOnlineToShadow();
 			prgWeatherStations.LazyOnlineToShadow();
 		}
@@ -143,6 +169,7 @@ namespace HansPlc
 		{
 			RecipeData.LazyShadowToOnline();
 			Utils.LazyShadowToOnline();
+			prgInflux.LazyShadowToOnline();
 			MAIN.LazyShadowToOnline();
 			prgWeatherStations.LazyShadowToOnline();
 		}
@@ -152,6 +179,7 @@ namespace HansPlc
 			var cloned = new PlainHansPlcTwinController();
 			cloned.RecipeData = RecipeData.CreatePlainerType();
 			cloned.Utils = Utils.CreatePlainerType();
+			cloned.prgInflux = prgInflux.CreatePlainerType();
 			cloned.MAIN = MAIN.CreatePlainerType();
 			cloned.prgWeatherStations = prgWeatherStations.CreatePlainerType();
 			return cloned;
@@ -161,6 +189,7 @@ namespace HansPlc
 		{
 			cloned.RecipeData = RecipeData.CreatePlainerType();
 			cloned.Utils = Utils.CreatePlainerType();
+			cloned.prgInflux = prgInflux.CreatePlainerType();
 			cloned.MAIN = MAIN.CreatePlainerType();
 			cloned.prgWeatherStations = prgWeatherStations.CreatePlainerType();
 			return cloned;
@@ -213,6 +242,7 @@ namespace HansPlc
 			this.Connector = adapter.GetConnector(new object[]{});
 			_RecipeData = new RecipeData(this.Connector, "", "RecipeData");
 			_Utils = new Utils(this.Connector, "", "Utils");
+			_prgInflux = new prgInflux(this.Connector, "", "prgInflux");
 			_MAIN = new MAIN(this.Connector, "", "MAIN");
 			_prgWeatherStations = new prgWeatherStations(this.Connector, "Program", "prgWeatherStations");
 		}
@@ -222,6 +252,7 @@ namespace HansPlc
 			this.Connector = adapter.GetConnector(parameters);
 			_RecipeData = new RecipeData(this.Connector, "", "RecipeData");
 			_Utils = new Utils(this.Connector, "", "Utils");
+			_prgInflux = new prgInflux(this.Connector, "", "prgInflux");
 			_MAIN = new MAIN(this.Connector, "", "MAIN");
 			_prgWeatherStations = new prgWeatherStations(this.Connector, "Program", "prgWeatherStations");
 		}
@@ -231,6 +262,7 @@ namespace HansPlc
 			this.Connector = adapter.GetConnector(adapter.Parameters);
 			_RecipeData = new RecipeData(this.Connector, "", "RecipeData");
 			_Utils = new Utils(this.Connector, "", "Utils");
+			_prgInflux = new prgInflux(this.Connector, "", "prgInflux");
 			_MAIN = new MAIN(this.Connector, "", "MAIN");
 			_prgWeatherStations = new prgWeatherStations(this.Connector, "Program", "prgWeatherStations");
 		}
@@ -272,6 +304,11 @@ namespace HansPlc
 			get;
 		}
 
+		IprgInflux prgInflux
+		{
+			get;
+		}
+
 		IMAIN MAIN
 		{
 			get;
@@ -298,6 +335,11 @@ namespace HansPlc
 		}
 
 		IShadowUtils Utils
+		{
+			get;
+		}
+
+		IShadowprgInflux prgInflux
 		{
 			get;
 		}
@@ -355,6 +397,20 @@ namespace HansPlc
 			}
 		}
 
+		PlainprgInflux _prgInflux;
+		public PlainprgInflux prgInflux
+		{
+			get
+			{
+				return _prgInflux;
+			}
+
+			set
+			{
+				_prgInflux = value;
+			}
+		}
+
 		PlainMAIN _MAIN;
 		public PlainMAIN MAIN
 		{
@@ -387,6 +443,7 @@ namespace HansPlc
 		{
 			RecipeData.CopyPlainToCyclic(target.RecipeData);
 			Utils.CopyPlainToCyclic(target.Utils);
+			prgInflux.CopyPlainToCyclic(target.prgInflux);
 			MAIN.CopyPlainToCyclic(target.MAIN);
 			prgWeatherStations.CopyPlainToCyclic(target.prgWeatherStations);
 		}
@@ -400,6 +457,7 @@ namespace HansPlc
 		{
 			RecipeData.CopyPlainToShadow(target.RecipeData);
 			Utils.CopyPlainToShadow(target.Utils);
+			prgInflux.CopyPlainToShadow(target.prgInflux);
 			MAIN.CopyPlainToShadow(target.MAIN);
 			prgWeatherStations.CopyPlainToShadow(target.prgWeatherStations);
 		}
@@ -413,6 +471,7 @@ namespace HansPlc
 		{
 			RecipeData.CopyCyclicToPlain(source.RecipeData);
 			Utils.CopyCyclicToPlain(source.Utils);
+			prgInflux.CopyCyclicToPlain(source.prgInflux);
 			MAIN.CopyCyclicToPlain(source.MAIN);
 			prgWeatherStations.CopyCyclicToPlain(source.prgWeatherStations);
 		}
@@ -426,6 +485,7 @@ namespace HansPlc
 		{
 			RecipeData.CopyShadowToPlain(source.RecipeData);
 			Utils.CopyShadowToPlain(source.Utils);
+			prgInflux.CopyShadowToPlain(source.prgInflux);
 			MAIN.CopyShadowToPlain(source.MAIN);
 			prgWeatherStations.CopyShadowToPlain(source.prgWeatherStations);
 		}
@@ -439,6 +499,7 @@ namespace HansPlc
 		{
 			_RecipeData = new PlainRecipeData();
 			_Utils = new PlainUtils();
+			_prgInflux = new PlainprgInflux();
 			_MAIN = new PlainMAIN();
 			_prgWeatherStations = new PlainprgWeatherStations();
 		}

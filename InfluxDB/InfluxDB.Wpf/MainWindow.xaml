@@ -1,0 +1,71 @@
+﻿<Window x:Class="InfluxDB.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfluxDB.Wpf"
+        xmlns:vortex="http://vortex.mts/xaml"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="InfluxDB" Height="450" Width="800"
+        Background="{DynamicResource Surface}">
+    <Window.DataContext>
+        <local:MainWindowViewModel></local:MainWindowViewModel>
+    </Window.DataContext>
+    <Grid Style="{DynamicResource Card}" Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <vortex:RenderableContentControl DataContext="{Binding PLC.prgInflux}" Margin="15">
+            <vortex:RenderableContentControl.RootContainer>
+                <UniformGrid Rows="1" Columns="3"></UniformGrid>
+            </vortex:RenderableContentControl.RootContainer>
+        </vortex:RenderableContentControl>
+        <StackPanel Grid.Row="1" Margin="20">
+            <GroupBox Header="Number of record since starting the application">
+                <TextBlock Text="{Binding Influx.Gatherer.NumberOfRecords, Mode=OneWay}"></TextBlock>
+            </GroupBox>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Influx Query" Grid.Row="0" Margin="5" Padding="5">
+                <TextBox Text="{Binding InfluxQuery}"  FontSize="15" Foreground="YellowGreen" Background="Black"></TextBox>
+            </GroupBox>
+            <!--//SELECT * FROM "foodships" WHERE time > now() - 1h-->
+            <TabControl Grid.Row="1" >
+                <TabItem Header="Table">
+                    <DataGrid ItemsSource="{Binding Influx.Retriever.Series}" Margin="10"/>
+                </TabItem>
+                <TabItem Header="Chart">
+                    <oxy:Plot>
+                        <oxy:Plot.Series>
+                            <oxy:LineSeries ItemsSource="{Binding Points}"></oxy:LineSeries>
+                        </oxy:Plot.Series>
+                    </oxy:Plot>
+                </TabItem>
+            </TabControl>
+            <UniformGrid Grid.Row="2" Margin="10" Style="{DynamicResource Card}">
+                <GroupBox Header="Min">
+                    <TextBlock Text="{Binding Influx.Retriever.Min}"></TextBlock>
+                </GroupBox>
+                <GroupBox Header="Max">
+                    <TextBlock Text="{Binding Influx.Retriever.Max}"></TextBlock>
+                </GroupBox>
+                <GroupBox Header="Average">
+                    <TextBlock Text="{Binding Influx.Retriever.Average}"></TextBlock>
+                </GroupBox>
+                <GroupBox Header="Median">
+                    <TextBlock Text="{Binding Influx.Retriever.Median}"></TextBlock>
+                </GroupBox>
+            </UniformGrid>
+            <Button Grid.Row="3" Command="{Binding RetrieveDataCommand}" Content="Re-Load"></Button>
+        </Grid>
+    </Grid>
+</Window>

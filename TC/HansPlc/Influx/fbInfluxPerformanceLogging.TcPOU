@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="fbInfluxPerformanceLogging" Id="{5ff4b3e5-e813-4ba9-ad4c-d1bedb24728c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fbInfluxPerformanceLogging
+VAR
+	{attribute clr [ReadOnly()]}
+	{attribute clr [CompilerOmits("BuilderPlainer")]}
+	{attribute clr [RenderIgnore()]}
+	_logStart : ULINT;
+	{attribute clr [RenderIgnore()]}
+	{attribute clr [CompilerOmits("BuilderPlainer")]}
+	_logDone : ULINT;
+	
+	_data : InfluxData;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[_data.CycleCount := TwinCAT_SystemInfoVarList._TaskInfo[1].CycleCount;
+_data.CycleTime := TwinCAT_SystemInfoVarList._TaskInfo[1].CycleTime;
+_data.LastExecTime := TwinCAT_SystemInfoVarList._TaskInfo[1].LastExecTime;
+
+IF(_logStart <= _logDone) THEN 
+	_logStart := _logStart + 1; 
+END_IF
+	
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="fbInfluxPerformanceLogging">
+      <LineId Id="9" Count="0" />
+      <LineId Id="20" Count="1" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="30" Count="1" />
+      <LineId Id="28" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="22" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
