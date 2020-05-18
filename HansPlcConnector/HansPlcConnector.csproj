@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Inxton.Licencing, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3bf43df27f52305d, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inxton.Vortex.Connector.0.117.1-preview.1\lib\netstandard2.0\Inxton.Licencing.dll</HintPath>
+      <HintPath>..\packages\Inxton.Vortex.Connector.1.0.0\lib\netstandard2.0\Inxton.Licencing.dll</HintPath>
     </Reference>
     <Reference Include="Inxton.Package.Vortex.Essentials, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inxton.Package.Vortex.Essentials.0.171.0-preview.2\lib\netstandard2.0\Inxton.Package.Vortex.Essentials.dll</HintPath>
+      <HintPath>..\packages\Inxton.Package.Vortex.Essentials.1.0.2\lib\netstandard2.0\Inxton.Package.Vortex.Essentials.dll</HintPath>
     </Reference>
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
       <HintPath>..\packages\Serilog.2.8.0\lib\net46\Serilog.dll</HintPath>
@@ -58,17 +58,17 @@
     <Reference Include="TwinCAT.Ads, Version=4.3.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
       <HintPath>..\packages\Beckhoff.TwinCAT.Ads.4.3.7\lib\Net40-full\TwinCAT.Ads.dll</HintPath>
     </Reference>
-    <Reference Include="Vortex.Adapters.Connector.Tc3, Version=0.117.1.0, Culture=neutral, PublicKeyToken=dfa781ee5783a74c, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inxton.Vortex.Adapters.Connector.Tc3.0.117.1-preview.1\lib\netstandard2.0\Vortex.Adapters.Connector.Tc3.dll</HintPath>
+    <Reference Include="Vortex.Adapters.Connector.Tc3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=dfa781ee5783a74c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Inxton.Vortex.Adapters.Connector.Tc3.1.0.0\lib\netstandard2.0\Vortex.Adapters.Connector.Tc3.dll</HintPath>
     </Reference>
     <Reference Include="vortex.compiler.console.placeholder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inxton.vortex.compiler.console.0.117.12-preview.0\lib\netstandard2.0\vortex.compiler.console.placeholder.dll</HintPath>
+      <HintPath>..\packages\Inxton.vortex.compiler.console.1.0.0\lib\netstandard2.0\vortex.compiler.console.placeholder.dll</HintPath>
     </Reference>
-    <Reference Include="Vortex.Connector, Version=0.117.1.0, Culture=neutral, PublicKeyToken=9f2602fd14098343, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inxton.Vortex.Connector.0.117.1-preview.1\lib\netstandard2.0\Vortex.Connector.dll</HintPath>
+    <Reference Include="Vortex.Connector, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9f2602fd14098343, processorArchitecture=MSIL">
+      <HintPath>..\packages\Inxton.Vortex.Connector.1.0.0\lib\netstandard2.0\Vortex.Connector.dll</HintPath>
     </Reference>
-    <Reference Include="Vortex.Framework.Abstractions, Version=0.120.0.0, Culture=neutral, PublicKeyToken=9f2602fd14098343, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inxton.Vortex.Framework.Abstractions.0.120.0-preview.1\lib\netstandard2.0\Vortex.Framework.Abstractions.dll</HintPath>
+    <Reference Include="Vortex.Framework.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9f2602fd14098343, processorArchitecture=MSIL">
+      <HintPath>..\packages\Inxton.Vortex.Framework.Abstractions.1.0.0\lib\netstandard2.0\Vortex.Framework.Abstractions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
