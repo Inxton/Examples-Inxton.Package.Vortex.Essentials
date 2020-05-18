@@ -154,5 +154,5 @@ Install the extension from [Visual Studio Marketplace](https://marketplace.visua
 
 
 ---
-Developed with ♥ at [MTS](https://www.mts.sk/en) - putting the heart into manufacturing.
+Developed with ❤ at [MTS](https://www.mts.sk/en) - putting the heart into manufacturing.
  
