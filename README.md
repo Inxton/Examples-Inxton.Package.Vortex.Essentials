@@ -134,12 +134,9 @@ This example is described [here](https://github.com/Inxton/Inxton.Package.Vortex
 
 It show the customization option when auto-generating the UI/HMI.
 
-# License
+# Install developer license
 
-TLDR
-> You can use Inxton.Vortex.Framework free of charge, although when you want to use it in a production environment, you need to go to  [INXTON.com](https://www.inxton.com/) and purchase a license.
-
-To make our lawyers happy - read the whole license agreement [here](https://github.com/Inxton/about/blob/master/license.md)
+Get more information and your license [here](https://github.com/Inxton/documentation/blob/master/common/LicenseInstallation.md).
 
 
 ## What to do next?
