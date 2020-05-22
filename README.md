@@ -10,6 +10,7 @@ In this repository, you'll find examples that aim o present some key features of
 # Restoring and updating packages
 
 [Restore packages](https://github.com/Inxton/Examples-Inxton.Package.Vortex.Core#restore-packages)
+
 [Update packages](https://github.com/Inxton/Examples-Inxton.Package.Vortex.Core#update-packages)
 
 
