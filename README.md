@@ -137,7 +137,7 @@ What how to video
 
 ## Weather stations
 
-This example is described [here](https://github.com/Inxton/Inxton.Package.Vortex.Essentials#how-to-generate-ui)
+This example is described [here](https://github.com/Inxton/documentation/blob/master/Inxton.Package.Vortex.Essentials/README.md#how-to-generate-ui)
 
 It show the customization option when auto-generating the UI/HMI.
 
