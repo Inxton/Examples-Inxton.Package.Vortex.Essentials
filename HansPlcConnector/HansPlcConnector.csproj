@@ -87,6 +87,15 @@
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbFluentString.g.cs">
       <Link>_generated\HansPlc\fbFluentString.g.cs</Link>
     </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbInfluxPerformanceLogging.g.cs">
+      <Link>_generated\HansPlc\fbInfluxPerformanceLogging.g.cs</Link>
+    </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbSimpleRemoteExec.g.cs">
+      <Link>_generated\HansPlc\fbSimpleRemoteExec.g.cs</Link>
+    </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbSpeech.g.cs">
+      <Link>_generated\HansPlc\fbSpeech.g.cs</Link>
+    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbStations.g.cs">
       <Link>_generated\HansPlc\fbStations.g.cs</Link>
     </Compile>
@@ -96,14 +105,23 @@
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\HansPlc.g.cs">
       <Link>_generated\HansPlc\HansPlc.g.cs</Link>
     </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\InfluxData.g.cs">
+      <Link>_generated\HansPlc\InfluxData.g.cs</Link>
+    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\MAIN.g.cs">
       <Link>_generated\HansPlc\MAIN.g.cs</Link>
     </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgAddedProperties.g.cs">
       <Link>_generated\HansPlc\prgAddedProperties.g.cs</Link>
     </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgInflux.g.cs">
+      <Link>_generated\HansPlc\prgInflux.g.cs</Link>
+    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgSimple.g.cs">
       <Link>_generated\HansPlc\prgSimple.g.cs</Link>
+    </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgVoiceSynsthesis.g.cs">
+      <Link>_generated\HansPlc\prgVoiceSynsthesis.g.cs</Link>
     </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgWeatherStations.g.cs">
       <Link>_generated\HansPlc\prgWeatherStations.g.cs</Link>
@@ -131,6 +149,7 @@
     </Compile>
     <Compile Include="Entry.cs" />
     <Compile Include="pex\fbWorldWeatherWatch.cs" />
+    <Compile Include="pex\Influx\PlainInfluxData.cs" />
     <Compile Include="pex\structWeatherStation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

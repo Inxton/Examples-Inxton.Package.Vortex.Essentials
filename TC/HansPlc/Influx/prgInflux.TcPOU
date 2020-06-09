@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="prgInflux" Id="{17e948a9-7828-4cea-9f14-e278446d659c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM prgInflux
+VAR
+	_influx : fbInfluxPerformanceLogging;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[_influx();]]></ST>
+    </Implementation>
+    <LineIds Name="prgInflux">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

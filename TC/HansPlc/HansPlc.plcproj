@@ -17,6 +17,15 @@
     <LibraryReferences>{c2ab9d6e-e52d-4eb9-98f7-05fad18b156b}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Influx\fbInfluxPerformanceLogging.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Influx\InfluxData.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Influx\prgInflux.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -33,7 +42,16 @@
     <Compile Include="Recipes\stRecipe.TcDUT">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="VoiceSyntesis\fbSpeech.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VoiceSyntesis\prgVoiceSynsthesis.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="_Utils\fbFluentString.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_Utils\fbSimpleRemoteExec.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="_Utils\Utils.TcGVL">
@@ -54,6 +72,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Influx" />
+    <Folder Include="VoiceSyntesis" />
     <Folder Include="Recipes" />
     <Folder Include="WeatherStations" />
     <Folder Include="_Utils" />

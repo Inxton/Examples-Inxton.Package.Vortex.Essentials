@@ -8,7 +8,25 @@
     },
     {
       "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbInfluxPerformanceLogging",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbSpeech",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
       "TypeName": "fbFluentString",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbSimpleRemoteExec",
       "Namespace": "HansPlc",
       "TypeMetaInfo": 4
     },
@@ -17,6 +35,12 @@
       "TypeName": "fbWorldWeatherWatch",
       "Namespace": "HansPlc",
       "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "InfluxData",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 1
     },
     {
       "TypeAttributes": "\n{attribute addProperty Name \"\" }",
@@ -50,7 +74,19 @@
     },
     {
       "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "prgInflux",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
       "TypeName": "MAIN",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "prgVoiceSynsthesis",
       "Namespace": "HansPlc",
       "TypeMetaInfo": 3
     },

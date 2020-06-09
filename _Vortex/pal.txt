@@ -482,3 +482,4 @@
 2020-05-18 14:43:59.993 +02:00 [INF] Building project 'HansPlc.HansPlc'
 2020-05-18 14:43:59.993 +02:00 [INF] Installing project libraries into project 'HansPlc'
 2020-05-18 14:44:00.506 +02:00 [INF] Updating project HansPlc.HansPlc
+

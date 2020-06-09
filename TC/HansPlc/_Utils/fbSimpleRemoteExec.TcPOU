@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="fbSimpleRemoteExec" Id="{43ea00d1-283e-4198-bb16-45f6cfaf4aeb}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ABSTRACT fbSimpleRemoteExec
+VAR
+	_start : UINT;
+	_done : UINT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Execute" Id="{67b64cdb-f03d-4afd-bbb0-60eddd5e536d}">
+      <Declaration><![CDATA[METHOD ABSTRACT Execute : BOOL
+VAR_INPUT
+	param : ANY;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Invoke" Id="{716080f8-813f-4a50-8132-090c6e25e131}">
+      <Declaration><![CDATA[METHOD PUBLIC FINAL Invoke : BOOL
+
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF(THIS^._start > THIS^._done) THEN
+	Execute();
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fbSimpleRemoteExec">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="fbSimpleRemoteExec.Execute">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="fbSimpleRemoteExec.Invoke">
+      <LineId Id="5" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
