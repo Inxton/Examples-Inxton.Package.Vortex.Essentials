@@ -191,6 +191,15 @@ For this example to work, you will need to set-up a working instance of the Infl
   # Determines whether the Flux query endpoint is enabled.
   flux-enabled = true
 
+  # Determines whether the Flux query logging is enabled.
+  # flux-log-enabled = false
+~~~
+
+For the server to use the config file, you will need to run it with parameters.
+
+~~~ Powershell
+PS [YourDrive]:[InfluxDB bin directory]\> .\influxd.exe run -config .\influxdb.conf
+~~~
 
 # License
 
