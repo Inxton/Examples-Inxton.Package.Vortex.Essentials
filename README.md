@@ -7,6 +7,13 @@ Maintaining the UI/HMI that involves PLC can be very expensive, especially when 
 
 In this repository, you'll find examples that aim o present some key features of the Inxton.Package.Vortex.Essential.
 
+# Restoring and updating packages
+
+[Restore packages](https://github.com/Inxton/Examples-Inxton.Package.Vortex.Core#restore-packages)
+
+[Update packages](https://github.com/Inxton/Examples-Inxton.Package.Vortex.Core#update-packages)
+
+
 ## Recipes
 
 We will create a simple recipe control like this.
@@ -130,7 +137,7 @@ What how to video
 
 ## Weather stations
 
-This example is described [here](https://github.com/Inxton/Inxton.Package.Vortex.Essentials#how-to-generate-ui)
+This example is described [here](https://github.com/Inxton/documentation/blob/master/Inxton.Package.Vortex.Essentials/README.md#how-to-generate-ui)
 
 It show the customization option when auto-generating the UI/HMI.
 
@@ -199,7 +206,11 @@ PS [YourDrive]:[InfluxDB bin directory]\> .\influxd.exe run -config .\influxdb.c
 TLDR
 > You can use Inxton.Vortex.Framework free of charge, although when you want to use it in a production environment, you need to go to  [INXTON.com](https://www.inxton.com/) and purchase a license.
 
-To make our lawyers happy - read the whole license agreement [here](https://github.com/Inxton/about/blob/master/license.md)
+
+# Install developer license
+
+
+Get more information and your license [here](https://github.com/Inxton/documentation/blob/master/common/LicenseInstallation.md).
 
 
 ## What to do next?
@@ -214,5 +225,5 @@ Install the extension from [Visual Studio Marketplace](https://marketplace.visua
 
 
 ---
-Developed with ♥ at [MTS](https://www.mts.sk/en) - putting the heart into manufacturing.
+Developed with ❤ at [MTS](https://www.mts.sk/en) - putting the heart into manufacturing.
  
