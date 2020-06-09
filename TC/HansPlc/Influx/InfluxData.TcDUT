@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <DUT Name="InfluxData" Id="{364eb6fb-b337-44ff-8300-53525e7c3755}">
+    <Declaration><![CDATA[TYPE InfluxData :
+STRUCT
+	CycleCount : UDINT;
+	CycleTime : UDINT;
+	LastExecTime: UDINT;
+	Minimum : UDINT := 0;
+	Maximum : UDINT := 4294967295;	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

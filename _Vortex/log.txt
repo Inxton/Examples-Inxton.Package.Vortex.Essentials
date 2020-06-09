@@ -427,3 +427,4 @@
 2020-05-18 14:43:56.268 +02:00 [INF] Builder version : 1.0.0.0 / 1.0.0+Branch.master.Sha.78115111a204fbfc55a8187cd2a854f5d9d87fed
 2020-05-18 14:44:01.265 +02:00 [INF] Compiling sources 'HansPlc'...
 2020-05-18 14:44:02.820 +02:00 [INF] >>>>>>I, Done
+

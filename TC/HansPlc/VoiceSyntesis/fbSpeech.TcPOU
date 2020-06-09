@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="fbSpeech" Id="{1a4b5a0b-3b73-432d-acfd-383a393272b8}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fbSpeech EXTENDS fbSimpleRemoteExec 
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Execute" Id="{4512e749-38a3-4d44-b934-bdb29e383b99}">
+      <Declaration><![CDATA[METHOD  Execute : BOOL
+VAR_INPUT
+	param : ANY;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Speak(]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Speak" Id="{413cdf48-41a9-4d34-8eb9-9c3890a86ada}">
+      <Declaration><![CDATA[METHOD PRIVATE Speak : BOOL
+VAR_INPUT
+	_sentence : STRING(255);
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fbSpeech">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="fbSpeech.Execute">
+      <LineId Id="6" Count="0" />
+    </LineIds>
+    <LineIds Name="fbSpeech.Speak">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
