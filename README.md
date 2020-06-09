@@ -143,11 +143,11 @@ It show the customization option when auto-generating the UI/HMI.
 
 ## InfluxDB
 
-We collect PLC structure ```InfluxData```, any primitive (base type) items added to this structure will be collected automatically into the database.
+In this example, we collect data from ```InfluxData``` PLC structure. Any primitive (base type) items added to this structure will be collected automatically into the database.
 
-FB ```fbInfluxPerformanceLogging``` has simple logic that populates ```InfluxData``` structure with values and executes remote request to the .net application that takes care of storing data into database.
+FB ```fbInfluxPerformanceLogging``` has simple logic that populates ```InfluxData``` structure with values and executes a remote request to the .net application that takes care of storing data into the database.
 
-There are two C# projects Console and Wpf applications. The console application runs fast data collection cycles. The Wpf application displays also some online data and data from the database.
+There are two C# projects Console and Wpf applications. The console application runs fast data collection cycles. The WPF application also displays some online data and data from the database.
 
 ![Solution](./assets/influx_solution_tree.png)
 ![WPF](./assets/influxdbwpf.png)
@@ -181,7 +181,7 @@ private void Register()
 
 ### How to run InfluxDB
 
-In order for this example to work you will need to set-up a working instance of InfluxDB database. Visit [influxdata](https://portal.influxdata.com/downloads/) and download influxdb, this examples were tested with ```v1.8.0```. You will also need to run the server instance with config file that has ```flux-enabled``` set to true in the http section of the config file.
+For this example to work, you will need to set-up a working instance of the InfluxDB database. Visit [influxdata](https://portal.influxdata.com/downloads/) and download influxdb; these examples were tested with ```v1.8.0```. You will also need to run the server instance with a config file that has ```flux-enabled``` set to ```true``` in the http section of the config file.
 
 ~~~ c
 [http]
@@ -191,15 +191,6 @@ In order for this example to work you will need to set-up a working instance of 
   # Determines whether the Flux query endpoint is enabled.
   flux-enabled = true
 
-  # Determines whether the Flux query logging is enabled.
-  # flux-log-enabled = false
-~~~
-
-In order for the server to use the config file you will need to run it with parameters
-
-~~~ Powershell
-PS [YourDrive]:[InfluxDB bin directory]\> .\influxd.exe run -config .\influxdb.conf
-~~~
 
 # License
 
