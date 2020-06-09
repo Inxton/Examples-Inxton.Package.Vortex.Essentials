@@ -24,9 +24,10 @@ namespace InfluxDB.Wpf
 
         private void RetrieveData()
         {
-            Influx.Retriever.RetrieveData(string.IsNullOrEmpty(InfluxQuery) ? "select * from /./" : InfluxQuery);      
-            Points?.Clear();
-            Points = Influx.Retriever.Series.Select(p => new DataPoint(p.CycleCount, p.LastExecTime)).ToList();
+            Influx.Retriever.RetrieveData(string.IsNullOrEmpty(InfluxQuery) ? "select * from /./" : InfluxQuery);                
+            LastValuePoints = Influx.Retriever.Series.Select(p => new DataPoint(p.CycleCount, p.LastExecTime)).ToList();
+            MaxValuesPoints = Influx.Retriever.Series.Select(p => new DataPoint(p.CycleCount, p.Maximum)).ToList();
+            MinValuesPoints = Influx.Retriever.Series.Select(p => new DataPoint(p.CycleCount, p.Minimum)).ToList();
         }
 
         public Influx.PlcPerformanceData Influx { get; } = new Influx.PlcPerformanceData();
@@ -51,18 +52,50 @@ namespace InfluxDB.Wpf
             }
         }
 
-        IList<DataPoint> points;
-        public IList<DataPoint> Points
+        IList<DataPoint> lastValuePoints;
+        public IList<DataPoint> LastValuePoints
         {
-            get => points; private set
+            get => lastValuePoints; private set
             {
-                if (points == value)
+                if (lastValuePoints == value)
                 {
                     return;
                 }
 
-                points = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Points)));
+                lastValuePoints = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(LastValuePoints)));
+            }
+        }
+
+        IList<DataPoint> maxValuesPoints;
+        public IList<DataPoint> MaxValuesPoints
+        {
+            get => maxValuesPoints;
+            set
+            {
+                if (maxValuesPoints == value)
+                {
+                    return;
+                }
+
+                maxValuesPoints = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MaxValuesPoints)));
+            }
+        }
+
+        IList<DataPoint> minValuesPoints;
+        public IList<DataPoint> MinValuesPoints
+        {
+            get => minValuesPoints;
+            set
+            {
+                if (minValuesPoints == value)
+                {
+                    return;
+                }
+
+                minValuesPoints = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MinValuesPoints)));
             }
         }
 

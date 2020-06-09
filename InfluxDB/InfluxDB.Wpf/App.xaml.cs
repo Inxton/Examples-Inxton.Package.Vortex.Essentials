@@ -19,7 +19,7 @@ namespace InfluxDB.Wpf
     {
         public App() : base()
         {
-            Entry.HansPlc.Connector.ReadWriteCycleDelay = 10;
+            Entry.HansPlc.Connector.ReadWriteCycleDelay = 100;
             Entry.HansPlc.Connector.BuildAndStart();
         }        
     }

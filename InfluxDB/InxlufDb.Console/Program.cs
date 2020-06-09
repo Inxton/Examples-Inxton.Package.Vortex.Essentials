@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vortex.Connector;
+using Vortex.Connector.ValueTypes;
 
 namespace Influx.Console
 {
@@ -69,6 +70,9 @@ namespace Influx.Console
 
                     System.Console.SetCursorPosition(consoleCursorPosition.left, consoleCursorPosition.top);
                     System.Console.WriteLine($"Records since app started: {++record_since_app_start}");
+
+                    influx_data_controller._data.Maximum.Synchron = 0;
+                    influx_data_controller._data.Minimum.Synchron = OnlinerUDInt.MaxValue;
 
                     // Tell the plc that the operation is done
                     influx_data_controller._logDone.Synchron = influx_data_controller._logStart.Synchron;

@@ -33,7 +33,7 @@ namespace InfluxDB.Wpf.Influx
         public Retriever Retriever { get; }
 
         private void ReCreate_DropCreate_Database()
-        {
+        {            
             if (Client.Database.GetDatabasesAsync().Result.Where(p => p.Name == "ws").Count() == 0)
             {
                 Client.Database.CreateDatabaseAsync("ws").Wait();

@@ -7,7 +7,7 @@
         xmlns:vortex="http://vortex.mts/xaml"
         xmlns:oxy="http://oxyplot.org/wpf"
         mc:Ignorable="d"
-        Title="InfluxDB" Height="450" Width="800"
+        Title="InfluxDB" Height="600" Width="800"
         Background="{DynamicResource Surface}">
     <Window.DataContext>
         <local:MainWindowViewModel></local:MainWindowViewModel>
@@ -20,7 +20,7 @@
         </Grid.RowDefinitions>
         <vortex:RenderableContentControl DataContext="{Binding PLC.prgInflux}" Margin="15">
             <vortex:RenderableContentControl.RootContainer>
-                <UniformGrid Rows="1" Columns="3"></UniformGrid>
+                <UniformGrid Rows="2" Columns="3"></UniformGrid>
             </vortex:RenderableContentControl.RootContainer>
         </vortex:RenderableContentControl>
         <StackPanel Grid.Row="1" Margin="20">
@@ -39,19 +39,22 @@
                 <TextBox Text="{Binding InfluxQuery}"  FontSize="15" Foreground="YellowGreen" Background="Black"></TextBox>
             </GroupBox>
             <!--//SELECT * FROM "foodships" WHERE time > now() - 1h-->
-            <TabControl Grid.Row="1" >
-                <TabItem Header="Table">
-                    <DataGrid ItemsSource="{Binding Influx.Retriever.Series}" Margin="10"/>
-                </TabItem>
-                <TabItem Header="Chart">
-                    <oxy:Plot>
-                        <oxy:Plot.Series>
-                            <oxy:LineSeries ItemsSource="{Binding Points}"></oxy:LineSeries>
-                        </oxy:Plot.Series>
-                    </oxy:Plot>
-                </TabItem>
-            </TabControl>
+            <UniformGrid Grid.Row="1" Rows="2" Columns="1">
+                <DataGrid ItemsSource="{Binding Influx.Retriever.Series}" Margin="10"/>
+                <oxy:Plot>
+                    <oxy:Plot.Series>
+                        <oxy:LineSeries ItemsSource="{Binding MaxValuesPoints}" Color="Red"></oxy:LineSeries>
+                        <oxy:LineSeries ItemsSource="{Binding LastValuePoints}" Color="Yellow" StrokeThickness="0.5"></oxy:LineSeries>
+                        <oxy:LineSeries ItemsSource="{Binding MinValuesPoints}" Color="Blue"></oxy:LineSeries>
+                    </oxy:Plot.Series>
+                </oxy:Plot>
+            </UniformGrid>
             <UniformGrid Grid.Row="2" Margin="10" Style="{DynamicResource Card}">
+                <UniformGrid.Resources>
+                    <Style TargetType="GroupBox">
+                        <Setter Property="Margin" Value="10"></Setter>
+                    </Style>
+                </UniformGrid.Resources>
                 <GroupBox Header="Min">
                     <TextBlock Text="{Binding Influx.Retriever.Min}"></TextBlock>
                 </GroupBox>

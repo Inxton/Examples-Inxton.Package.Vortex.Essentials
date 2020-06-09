@@ -6,6 +6,8 @@ STRUCT
 	CycleCount : UDINT;
 	CycleTime : UDINT;
 	LastExecTime: UDINT;
+	Minimum : UDINT := 0;
+	Maximum : UDINT := 4294967295;	
 END_STRUCT
 END_TYPE
 ]]></Declaration>

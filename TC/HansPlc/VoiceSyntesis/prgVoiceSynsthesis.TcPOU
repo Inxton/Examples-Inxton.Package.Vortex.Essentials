@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <POU Name="prgVoiceSynsthesis" Id="{292cc062-60d1-4444-bd9b-a3719ebf2528}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM prgVoiceSynsthesis
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="prgVoiceSynsthesis">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

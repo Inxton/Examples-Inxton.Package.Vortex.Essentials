@@ -105,11 +105,63 @@ namespace HansPlc
 			}
 		}
 
+		Vortex.Connector.ValueTypes.OnlinerUDInt _Minimum;
+		public Vortex.Connector.ValueTypes.OnlinerUDInt Minimum
+		{
+			get
+			{
+				return _Minimum;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.Minimum
+		{
+			get
+			{
+				return Minimum;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.Minimum
+		{
+			get
+			{
+				return Minimum;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.OnlinerUDInt _Maximum;
+		public Vortex.Connector.ValueTypes.OnlinerUDInt Maximum
+		{
+			get
+			{
+				return _Maximum;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.Maximum
+		{
+			get
+			{
+				return Maximum;
+			}
+		}
+
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.Maximum
+		{
+			get
+			{
+				return Maximum;
+			}
+		}
+
 		public void LazyOnlineToShadow()
 		{
 			CycleCount.Shadow = CycleCount.LastValue;
 			CycleTime.Shadow = CycleTime.LastValue;
 			LastExecTime.Shadow = LastExecTime.LastValue;
+			Minimum.Shadow = Minimum.LastValue;
+			Maximum.Shadow = Maximum.LastValue;
 		}
 
 		public void LazyShadowToOnline()
@@ -117,6 +169,8 @@ namespace HansPlc
 			CycleCount.Cyclic = CycleCount.Shadow;
 			CycleTime.Cyclic = CycleTime.Shadow;
 			LastExecTime.Cyclic = LastExecTime.Shadow;
+			Minimum.Cyclic = Minimum.Shadow;
+			Maximum.Cyclic = Maximum.Shadow;
 		}
 
 		public PlainInfluxData CreatePlainerType()
@@ -260,6 +314,8 @@ namespace HansPlc
 			_CycleCount = @Connector.Online.Adapter.CreateUDINT(this, "", "CycleCount");
 			_CycleTime = @Connector.Online.Adapter.CreateUDINT(this, "", "CycleTime");
 			_LastExecTime = @Connector.Online.Adapter.CreateUDINT(this, "", "LastExecTime");
+			_Minimum = @Connector.Online.Adapter.CreateUDINT(this, "", "Minimum");
+			_Maximum = @Connector.Online.Adapter.CreateUDINT(this, "", "Maximum");
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -271,6 +327,8 @@ namespace HansPlc
 			_CycleCount = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			_CycleTime = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			_LastExecTime = Vortex.Connector.IConnectorFactory.CreateUDINT();
+			_Minimum = Vortex.Connector.IConnectorFactory.CreateUDINT();
+			_Maximum = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -307,6 +365,16 @@ namespace HansPlc
 			get;
 		}
 
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt Minimum
+		{
+			get;
+		}
+
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt Maximum
+		{
+			get;
+		}
+
 		System.String AttributeName
 		{
 			get;
@@ -336,6 +404,16 @@ namespace HansPlc
 		}
 
 		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt LastExecTime
+		{
+			get;
+		}
+
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt Minimum
+		{
+			get;
+		}
+
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt Maximum
 		{
 			get;
 		}
@@ -399,11 +477,41 @@ namespace HansPlc
 			}
 		}
 
+		System.UInt32 _Minimum;
+		public System.UInt32 Minimum
+		{
+			get
+			{
+				return _Minimum;
+			}
+
+			set
+			{
+				_Minimum = value;
+			}
+		}
+
+		System.UInt32 _Maximum;
+		public System.UInt32 Maximum
+		{
+			get
+			{
+				return _Maximum;
+			}
+
+			set
+			{
+				_Maximum = value;
+			}
+		}
+
 		public void CopyPlainToCyclic(HansPlc.InfluxData target)
 		{
 			target.CycleCount.Cyclic = CycleCount;
 			target.CycleTime.Cyclic = CycleTime;
 			target.LastExecTime.Cyclic = LastExecTime;
+			target.Minimum.Cyclic = Minimum;
+			target.Maximum.Cyclic = Maximum;
 		}
 
 		public void CopyPlainToCyclic(HansPlc.IInfluxData target)
@@ -416,6 +524,8 @@ namespace HansPlc
 			target.CycleCount.Shadow = CycleCount;
 			target.CycleTime.Shadow = CycleTime;
 			target.LastExecTime.Shadow = LastExecTime;
+			target.Minimum.Shadow = Minimum;
+			target.Maximum.Shadow = Maximum;
 		}
 
 		public void CopyPlainToShadow(HansPlc.IShadowInfluxData target)
@@ -428,6 +538,8 @@ namespace HansPlc
 			CycleCount = source.CycleCount.LastValue;
 			CycleTime = source.CycleTime.LastValue;
 			LastExecTime = source.LastExecTime.LastValue;
+			Minimum = source.Minimum.LastValue;
+			Maximum = source.Maximum.LastValue;
 		}
 
 		public void CopyCyclicToPlain(HansPlc.IInfluxData source)
@@ -440,6 +552,8 @@ namespace HansPlc
 			CycleCount = source.CycleCount.Shadow;
 			CycleTime = source.CycleTime.Shadow;
 			LastExecTime = source.LastExecTime.Shadow;
+			Minimum = source.Minimum.Shadow;
+			Maximum = source.Maximum.Shadow;
 		}
 
 		public void CopyShadowToPlain(HansPlc.IShadowInfluxData source)

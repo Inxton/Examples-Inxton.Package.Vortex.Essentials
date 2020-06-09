@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Vortex.Connector;
+using Vortex.Connector.ValueTypes;
 
 namespace InfluxDB.Wpf.Influx
 {
@@ -72,6 +73,9 @@ namespace InfluxDB.Wpf.Influx
                     Client.Client.WriteAsync(point, dbName: DatabaseName).Wait();
 
                     NumberOfRecords++;
+
+                    influx._data.Maximum.Synchron = 0;
+                    influx._data.Minimum.Synchron = OnlinerUDInt.MaxValue;
 
                     // Tell the plc that the operation is done
                     influx._logDone.Synchron = influx._logStart.Synchron;              
