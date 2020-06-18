@@ -44,6 +44,12 @@
     },
     {
       "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "structMongoData",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
       "TypeName": "stContinuousValueLimits",
       "Namespace": "HansPlc",
       "TypeMetaInfo": 1
@@ -81,6 +87,12 @@
     {
       "TypeAttributes": "\n{attribute addProperty Name \"\" }",
       "TypeName": "MAIN",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "prgMongoDb",
       "Namespace": "HansPlc",
       "TypeMetaInfo": 3
     },

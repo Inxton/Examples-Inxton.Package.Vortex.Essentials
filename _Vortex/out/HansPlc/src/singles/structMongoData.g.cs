@@ -7,8 +7,8 @@ using Vortex.Connector.Identity;
 
 namespace HansPlc
 {
-	[Vortex.Connector.Attributes.TypeMetaDescriptorAttribute("{attribute addProperty Name \"\" }", "InfluxData", "HansPlc", TypeComplexityEnum.Complex)]
-	public partial class InfluxData : Vortex.Connector.IVortexObject, IInfluxData, IShadowInfluxData, Vortex.Connector.IVortexOnlineObject, Vortex.Connector.IVortexShadowObject
+	[Vortex.Connector.Attributes.TypeMetaDescriptorAttribute("{attribute addProperty Name \"\" }", "structMongoData", "HansPlc", TypeComplexityEnum.Complex)]
+	public partial class structMongoData : Vortex.Connector.IVortexObject, IstructMongoData, IShadowstructMongoData, Vortex.Connector.IVortexOnlineObject, Vortex.Connector.IVortexShadowObject
 	{
 		public string Symbol
 		{
@@ -39,7 +39,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.CycleCount
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IstructMongoData.CycleCount
 		{
 			get
 			{
@@ -47,7 +47,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.CycleCount
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowstructMongoData.CycleCount
 		{
 			get
 			{
@@ -64,7 +64,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.CycleTime
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IstructMongoData.CycleTime
 		{
 			get
 			{
@@ -72,7 +72,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.CycleTime
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowstructMongoData.CycleTime
 		{
 			get
 			{
@@ -89,7 +89,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.LastExecTime
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IstructMongoData.LastExecTime
 		{
 			get
 			{
@@ -97,7 +97,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.LastExecTime
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowstructMongoData.LastExecTime
 		{
 			get
 			{
@@ -114,7 +114,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.Minimum
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IstructMongoData.Minimum
 		{
 			get
 			{
@@ -122,7 +122,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.Minimum
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowstructMongoData.Minimum
 		{
 			get
 			{
@@ -139,7 +139,7 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.Maximum
+		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IstructMongoData.Maximum
 		{
 			get
 			{
@@ -147,36 +147,11 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.Maximum
+		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowstructMongoData.Maximum
 		{
 			get
 			{
 				return Maximum;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.OnlinerUDInt _HalfOfExecTime;
-		public Vortex.Connector.ValueTypes.OnlinerUDInt HalfOfExecTime
-		{
-			get
-			{
-				return _HalfOfExecTime;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.HalfOfExecTime
-		{
-			get
-			{
-				return HalfOfExecTime;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.HalfOfExecTime
-		{
-			get
-			{
-				return HalfOfExecTime;
 			}
 		}
 
@@ -187,7 +162,6 @@ namespace HansPlc
 			LastExecTime.Shadow = LastExecTime.LastValue;
 			Minimum.Shadow = Minimum.LastValue;
 			Maximum.Shadow = Maximum.LastValue;
-			HalfOfExecTime.Shadow = HalfOfExecTime.LastValue;
 		}
 
 		public void LazyShadowToOnline()
@@ -197,16 +171,15 @@ namespace HansPlc
 			LastExecTime.Cyclic = LastExecTime.Shadow;
 			Minimum.Cyclic = Minimum.Shadow;
 			Maximum.Cyclic = Maximum.Shadow;
-			HalfOfExecTime.Cyclic = HalfOfExecTime.Shadow;
 		}
 
-		public PlainInfluxData CreatePlainerType()
+		public PlainstructMongoData CreatePlainerType()
 		{
-			var cloned = new PlainInfluxData();
+			var cloned = new PlainstructMongoData();
 			return cloned;
 		}
 
-		protected PlainInfluxData CreatePlainerType(PlainInfluxData cloned)
+		protected PlainstructMongoData CreatePlainerType(PlainstructMongoData cloned)
 		{
 			return cloned;
 		}
@@ -269,13 +242,13 @@ namespace HansPlc
 			return this.@Connector;
 		}
 
-		public void FlushPlainToOnline(HansPlc.PlainInfluxData source)
+		public void FlushPlainToOnline(HansPlc.PlainstructMongoData source)
 		{
 			source.CopyPlainToCyclic(this);
 			this.Write();
 		}
 
-		public void CopyPlainToShadow(HansPlc.PlainInfluxData source)
+		public void CopyPlainToShadow(HansPlc.PlainstructMongoData source)
 		{
 			source.CopyPlainToShadow(this);
 		}
@@ -292,7 +265,7 @@ namespace HansPlc
 			this.LazyOnlineToShadow();
 		}
 
-		public void FlushOnlineToPlain(HansPlc.PlainInfluxData source)
+		public void FlushOnlineToPlain(HansPlc.PlainstructMongoData source)
 		{
 			this.Read();
 			source.CopyCyclicToPlain(this);
@@ -328,7 +301,7 @@ namespace HansPlc
 			set;
 		}
 
-		public InfluxData(Vortex.Connector.IVortexObject parent, string readableTail, string symbolTail)
+		public structMongoData(Vortex.Connector.IVortexObject parent, string readableTail, string symbolTail)
 		{
 			this.@SymbolTail = symbolTail;
 			this.@Connector = parent.GetConnector();
@@ -343,13 +316,12 @@ namespace HansPlc
 			_LastExecTime = @Connector.Online.Adapter.CreateUDINT(this, "", "LastExecTime");
 			_Minimum = @Connector.Online.Adapter.CreateUDINT(this, "", "Minimum");
 			_Maximum = @Connector.Online.Adapter.CreateUDINT(this, "", "Maximum");
-			_HalfOfExecTime = @Connector.Online.Adapter.CreateUDINT(this, "", "HalfOfExecTime");
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
 		}
 
-		public InfluxData()
+		public structMongoData()
 		{
 			PexPreConstructorParameterless();
 			_CycleCount = Vortex.Connector.IConnectorFactory.CreateUDINT();
@@ -357,16 +329,15 @@ namespace HansPlc
 			_LastExecTime = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			_Minimum = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			_Maximum = Vortex.Connector.IConnectorFactory.CreateUDINT();
-			_HalfOfExecTime = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
 
 		[System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Advanced)]
-		protected abstract class PlcInfluxData
+		protected abstract class PlcstructMongoData
 		{
 			///<summary>Prevents creating instance of this class via public constructor</summary><exclude/>
-			protected PlcInfluxData()
+			protected PlcstructMongoData()
 			{
 			}
 		}
@@ -377,7 +348,7 @@ namespace HansPlc
             /// This is onliner interface for its respective class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial interface IInfluxData : Vortex.Connector.IVortexOnlineObject
+	public partial interface IstructMongoData : Vortex.Connector.IVortexOnlineObject
 	{
 		Vortex.Connector.ValueTypes.Online.IOnlineUDInt CycleCount
 		{
@@ -404,20 +375,15 @@ namespace HansPlc
 			get;
 		}
 
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt HalfOfExecTime
-		{
-			get;
-		}
-
 		System.String AttributeName
 		{
 			get;
 		}
 
-		HansPlc.PlainInfluxData CreatePlainerType();
+		HansPlc.PlainstructMongoData CreatePlainerType();
 		void FlushOnlineToShadow();
-		void FlushPlainToOnline(HansPlc.PlainInfluxData source);
-		void FlushOnlineToPlain(HansPlc.PlainInfluxData source);
+		void FlushPlainToOnline(HansPlc.PlainstructMongoData source);
+		void FlushOnlineToPlain(HansPlc.PlainstructMongoData source);
 	}
 
 	
@@ -425,7 +391,7 @@ namespace HansPlc
             /// This is shadow interface for its respective class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial interface IShadowInfluxData : Vortex.Connector.IVortexShadowObject
+	public partial interface IShadowstructMongoData : Vortex.Connector.IVortexShadowObject
 	{
 		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt CycleCount
 		{
@@ -452,19 +418,14 @@ namespace HansPlc
 			get;
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt HalfOfExecTime
-		{
-			get;
-		}
-
 		System.String AttributeName
 		{
 			get;
 		}
 
-		HansPlc.PlainInfluxData CreatePlainerType();
+		HansPlc.PlainstructMongoData CreatePlainerType();
 		void FlushShadowToOnline();
-		void CopyPlainToShadow(HansPlc.PlainInfluxData source);
+		void CopyPlainToShadow(HansPlc.PlainstructMongoData source);
 	}
 
 	
@@ -472,7 +433,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainInfluxData : Vortex.Connector.IPlain
+	public partial class PlainstructMongoData : Vortex.Connector.IPlain
 	{
 		System.UInt32 _CycleCount;
 		public System.UInt32 CycleCount
@@ -544,81 +505,63 @@ namespace HansPlc
 			}
 		}
 
-		System.UInt32 _HalfOfExecTime;
-		public System.UInt32 HalfOfExecTime
-		{
-			get
-			{
-				return _HalfOfExecTime;
-			}
-
-			set
-			{
-				_HalfOfExecTime = value;
-			}
-		}
-
-		public void CopyPlainToCyclic(HansPlc.InfluxData target)
+		public void CopyPlainToCyclic(HansPlc.structMongoData target)
 		{
 			target.CycleCount.Cyclic = CycleCount;
 			target.CycleTime.Cyclic = CycleTime;
 			target.LastExecTime.Cyclic = LastExecTime;
 			target.Minimum.Cyclic = Minimum;
 			target.Maximum.Cyclic = Maximum;
-			target.HalfOfExecTime.Cyclic = HalfOfExecTime;
 		}
 
-		public void CopyPlainToCyclic(HansPlc.IInfluxData target)
+		public void CopyPlainToCyclic(HansPlc.IstructMongoData target)
 		{
-			this.CopyPlainToCyclic((HansPlc.InfluxData)target);
+			this.CopyPlainToCyclic((HansPlc.structMongoData)target);
 		}
 
-		public void CopyPlainToShadow(HansPlc.InfluxData target)
+		public void CopyPlainToShadow(HansPlc.structMongoData target)
 		{
 			target.CycleCount.Shadow = CycleCount;
 			target.CycleTime.Shadow = CycleTime;
 			target.LastExecTime.Shadow = LastExecTime;
 			target.Minimum.Shadow = Minimum;
 			target.Maximum.Shadow = Maximum;
-			target.HalfOfExecTime.Shadow = HalfOfExecTime;
 		}
 
-		public void CopyPlainToShadow(HansPlc.IShadowInfluxData target)
+		public void CopyPlainToShadow(HansPlc.IShadowstructMongoData target)
 		{
-			this.CopyPlainToShadow((HansPlc.InfluxData)target);
+			this.CopyPlainToShadow((HansPlc.structMongoData)target);
 		}
 
-		public void CopyCyclicToPlain(HansPlc.InfluxData source)
+		public void CopyCyclicToPlain(HansPlc.structMongoData source)
 		{
 			CycleCount = source.CycleCount.LastValue;
 			CycleTime = source.CycleTime.LastValue;
 			LastExecTime = source.LastExecTime.LastValue;
 			Minimum = source.Minimum.LastValue;
 			Maximum = source.Maximum.LastValue;
-			HalfOfExecTime = source.HalfOfExecTime.LastValue;
 		}
 
-		public void CopyCyclicToPlain(HansPlc.IInfluxData source)
+		public void CopyCyclicToPlain(HansPlc.IstructMongoData source)
 		{
-			this.CopyCyclicToPlain((HansPlc.InfluxData)source);
+			this.CopyCyclicToPlain((HansPlc.structMongoData)source);
 		}
 
-		public void CopyShadowToPlain(HansPlc.InfluxData source)
+		public void CopyShadowToPlain(HansPlc.structMongoData source)
 		{
 			CycleCount = source.CycleCount.Shadow;
 			CycleTime = source.CycleTime.Shadow;
 			LastExecTime = source.LastExecTime.Shadow;
 			Minimum = source.Minimum.Shadow;
 			Maximum = source.Maximum.Shadow;
-			HalfOfExecTime = source.HalfOfExecTime.Shadow;
 		}
 
-		public void CopyShadowToPlain(HansPlc.IShadowInfluxData source)
+		public void CopyShadowToPlain(HansPlc.IShadowstructMongoData source)
 		{
-			this.CopyShadowToPlain((HansPlc.InfluxData)source);
+			this.CopyShadowToPlain((HansPlc.structMongoData)source);
 		}
 
-		public PlainInfluxData()
+		public PlainstructMongoData()
 		{
 		}
 	}

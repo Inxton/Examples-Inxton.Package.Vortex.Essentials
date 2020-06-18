@@ -29,6 +29,12 @@
     <Compile Include="MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Mongo\prgMongoDb.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mongo\structMongoData.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -73,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Influx" />
+    <Folder Include="Mongo" />
     <Folder Include="VoiceSyntesis" />
     <Folder Include="Recipes" />
     <Folder Include="WeatherStations" />
