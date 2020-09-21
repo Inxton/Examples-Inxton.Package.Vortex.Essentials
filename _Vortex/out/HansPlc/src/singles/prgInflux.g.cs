@@ -279,7 +279,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainprgInflux : Vortex.Connector.IPlain
+	public partial class PlainprgInflux : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		PlainfbInfluxPerformanceLogging __influx;
 		public PlainfbInfluxPerformanceLogging _influx
@@ -291,7 +291,11 @@ namespace HansPlc
 
 			set
 			{
-				__influx = value;
+				if (__influx != value)
+				{
+					__influx = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(_influx)));
+				}
 			}
 		}
 
@@ -335,6 +339,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.prgInflux)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainprgInflux()
 		{
 			__influx = new PlainfbInfluxPerformanceLogging();

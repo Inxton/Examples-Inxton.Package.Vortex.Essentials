@@ -316,7 +316,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainfbSimpleRemoteExec : Vortex.Connector.IPlain
+	public partial class PlainfbSimpleRemoteExec : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		System.UInt16 __start;
 		public System.UInt16 _start
@@ -328,7 +328,11 @@ namespace HansPlc
 
 			set
 			{
-				__start = value;
+				if (__start != value)
+				{
+					__start = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(_start)));
+				}
 			}
 		}
 
@@ -342,7 +346,11 @@ namespace HansPlc
 
 			set
 			{
-				__done = value;
+				if (__done != value)
+				{
+					__done = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(_done)));
+				}
 			}
 		}
 
@@ -390,6 +398,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.fbSimpleRemoteExec)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainfbSimpleRemoteExec()
 		{
 		}

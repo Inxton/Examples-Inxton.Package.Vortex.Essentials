@@ -78,17 +78,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\_Vortex\out\HansPlc\loc\Localizations.Designer.cs">
-      <Link>Properties\Localizations.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Localizations.resx</DependentUpon>
-    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\enumStationStatus.g.cs">
       <Link>_generated\HansPlc\enumStationStatus.g.cs</Link>
-    </Compile>
-    <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbDrive.g.cs">
-      <Link>_generated\HansPlc\fbDrive.g.cs</Link>
     </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbFluentString.g.cs">
       <Link>_generated\HansPlc\fbFluentString.g.cs</Link>
@@ -102,9 +93,6 @@
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbSpeech.g.cs">
       <Link>_generated\HansPlc\fbSpeech.g.cs</Link>
     </Compile>
-    <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbStations.g.cs">
-      <Link>_generated\HansPlc\fbStations.g.cs</Link>
-    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\fbWorldWeatherWatch.g.cs">
       <Link>_generated\HansPlc\fbWorldWeatherWatch.g.cs</Link>
     </Compile>
@@ -117,17 +105,11 @@
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\MAIN.g.cs">
       <Link>_generated\HansPlc\MAIN.g.cs</Link>
     </Compile>
-    <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgAddedProperties.g.cs">
-      <Link>_generated\HansPlc\prgAddedProperties.g.cs</Link>
-    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgInflux.g.cs">
       <Link>_generated\HansPlc\prgInflux.g.cs</Link>
     </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgMongoDb.g.cs">
       <Link>_generated\HansPlc\prgMongoDb.g.cs</Link>
-    </Compile>
-    <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgSimple.g.cs">
-      <Link>_generated\HansPlc\prgSimple.g.cs</Link>
     </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgVoiceSynsthesis.g.cs">
       <Link>_generated\HansPlc\prgVoiceSynsthesis.g.cs</Link>
@@ -147,14 +129,8 @@
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\structMongoData.g.cs">
       <Link>_generated\HansPlc\structMongoData.g.cs</Link>
     </Compile>
-    <Compile Include="..\_Vortex\out\HansPlc\src\singles\structWeatherNow.g.cs">
-      <Link>_generated\HansPlc\structWeatherNow.g.cs</Link>
-    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\structWeatherStation.g.cs">
       <Link>_generated\HansPlc\structWeatherStation.g.cs</Link>
-    </Compile>
-    <Compile Include="..\_Vortex\out\HansPlc\src\singles\strucWeatherNow.g.cs">
-      <Link>_generated\HansPlc\strucWeatherNow.g.cs</Link>
     </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\Utils.g.cs">
       <Link>_generated\HansPlc\Utils.g.cs</Link>
@@ -165,6 +141,11 @@
     <Compile Include="pex\Mongo\PlainstructMongoData.cs" />
     <Compile Include="pex\structWeatherStation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Localizations.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Localizations.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\_Vortex\out\HansPlc\loc\Localizations.ar.resx">
@@ -185,8 +166,7 @@
     <EmbeddedResource Include="..\_Vortex\out\HansPlc\loc\Localizations.ru.resx">
       <Link>Properties\Localizations.ru.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\_Vortex\out\HansPlc\src\singles\..\..\loc\Localizations.resx">
-      <Link>Properties\Localizations.resx</Link>
+    <EmbeddedResource Include="Properties\Localizations.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localizations.Designer.cs</LastGenOutput>
     </EmbeddedResource>

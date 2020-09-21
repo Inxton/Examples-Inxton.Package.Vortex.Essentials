@@ -433,7 +433,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainstructMongoData : Vortex.Connector.IPlain
+	public partial class PlainstructMongoData : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		System.UInt32 _CycleCount;
 		public System.UInt32 CycleCount
@@ -445,7 +445,11 @@ namespace HansPlc
 
 			set
 			{
-				_CycleCount = value;
+				if (_CycleCount != value)
+				{
+					_CycleCount = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(CycleCount)));
+				}
 			}
 		}
 
@@ -459,7 +463,11 @@ namespace HansPlc
 
 			set
 			{
-				_CycleTime = value;
+				if (_CycleTime != value)
+				{
+					_CycleTime = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(CycleTime)));
+				}
 			}
 		}
 
@@ -473,7 +481,11 @@ namespace HansPlc
 
 			set
 			{
-				_LastExecTime = value;
+				if (_LastExecTime != value)
+				{
+					_LastExecTime = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(LastExecTime)));
+				}
 			}
 		}
 
@@ -487,7 +499,11 @@ namespace HansPlc
 
 			set
 			{
-				_Minimum = value;
+				if (_Minimum != value)
+				{
+					_Minimum = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Minimum)));
+				}
 			}
 		}
 
@@ -501,7 +517,11 @@ namespace HansPlc
 
 			set
 			{
-				_Maximum = value;
+				if (_Maximum != value)
+				{
+					_Maximum = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Maximum)));
+				}
 			}
 		}
 
@@ -561,6 +581,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.structMongoData)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainstructMongoData()
 		{
 		}

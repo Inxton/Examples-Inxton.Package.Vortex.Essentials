@@ -328,7 +328,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainprgWeatherStations : Vortex.Connector.IPlain
+	public partial class PlainprgWeatherStations : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		PlainfbWorldWeatherWatch __weatherStations;
 		public PlainfbWorldWeatherWatch _weatherStations
@@ -340,7 +340,11 @@ namespace HansPlc
 
 			set
 			{
-				__weatherStations = value;
+				if (__weatherStations != value)
+				{
+					__weatherStations = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(_weatherStations)));
+				}
 			}
 		}
 
@@ -355,7 +359,11 @@ namespace HansPlc
 
 			set
 			{
-				_PlcCommentOnCurrentWeather = value;
+				if (_PlcCommentOnCurrentWeather != value)
+				{
+					_PlcCommentOnCurrentWeather = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(PlcCommentOnCurrentWeather)));
+				}
 			}
 		}
 
@@ -403,6 +411,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.prgWeatherStations)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainprgWeatherStations()
 		{
 			__weatherStations = new PlainfbWorldWeatherWatch();

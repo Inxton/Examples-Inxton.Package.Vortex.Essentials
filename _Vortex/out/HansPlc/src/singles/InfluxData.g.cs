@@ -155,31 +155,6 @@ namespace HansPlc
 			}
 		}
 
-		Vortex.Connector.ValueTypes.OnlinerUDInt _HalfOfExecTime;
-		public Vortex.Connector.ValueTypes.OnlinerUDInt HalfOfExecTime
-		{
-			get
-			{
-				return _HalfOfExecTime;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt IInfluxData.HalfOfExecTime
-		{
-			get
-			{
-				return HalfOfExecTime;
-			}
-		}
-
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt IShadowInfluxData.HalfOfExecTime
-		{
-			get
-			{
-				return HalfOfExecTime;
-			}
-		}
-
 		public void LazyOnlineToShadow()
 		{
 			CycleCount.Shadow = CycleCount.LastValue;
@@ -187,7 +162,6 @@ namespace HansPlc
 			LastExecTime.Shadow = LastExecTime.LastValue;
 			Minimum.Shadow = Minimum.LastValue;
 			Maximum.Shadow = Maximum.LastValue;
-			HalfOfExecTime.Shadow = HalfOfExecTime.LastValue;
 		}
 
 		public void LazyShadowToOnline()
@@ -197,7 +171,6 @@ namespace HansPlc
 			LastExecTime.Cyclic = LastExecTime.Shadow;
 			Minimum.Cyclic = Minimum.Shadow;
 			Maximum.Cyclic = Maximum.Shadow;
-			HalfOfExecTime.Cyclic = HalfOfExecTime.Shadow;
 		}
 
 		public PlainInfluxData CreatePlainerType()
@@ -343,7 +316,6 @@ namespace HansPlc
 			_LastExecTime = @Connector.Online.Adapter.CreateUDINT(this, "", "LastExecTime");
 			_Minimum = @Connector.Online.Adapter.CreateUDINT(this, "", "Minimum");
 			_Maximum = @Connector.Online.Adapter.CreateUDINT(this, "", "Maximum");
-			_HalfOfExecTime = @Connector.Online.Adapter.CreateUDINT(this, "", "HalfOfExecTime");
 			AttributeName = "";
 			PexConstructor(parent, readableTail, symbolTail);
 			parent.AddChild(this);
@@ -357,7 +329,6 @@ namespace HansPlc
 			_LastExecTime = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			_Minimum = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			_Maximum = Vortex.Connector.IConnectorFactory.CreateUDINT();
-			_HalfOfExecTime = Vortex.Connector.IConnectorFactory.CreateUDINT();
 			AttributeName = "";
 			PexConstructorParameterless();
 		}
@@ -400,11 +371,6 @@ namespace HansPlc
 		}
 
 		Vortex.Connector.ValueTypes.Online.IOnlineUDInt Maximum
-		{
-			get;
-		}
-
-		Vortex.Connector.ValueTypes.Online.IOnlineUDInt HalfOfExecTime
 		{
 			get;
 		}
@@ -452,11 +418,6 @@ namespace HansPlc
 			get;
 		}
 
-		Vortex.Connector.ValueTypes.Shadows.IShadowUDInt HalfOfExecTime
-		{
-			get;
-		}
-
 		System.String AttributeName
 		{
 			get;
@@ -472,7 +433,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainInfluxData : Vortex.Connector.IPlain
+	public partial class PlainInfluxData : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		System.UInt32 _CycleCount;
 		public System.UInt32 CycleCount
@@ -484,7 +445,11 @@ namespace HansPlc
 
 			set
 			{
-				_CycleCount = value;
+				if (_CycleCount != value)
+				{
+					_CycleCount = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(CycleCount)));
+				}
 			}
 		}
 
@@ -498,7 +463,11 @@ namespace HansPlc
 
 			set
 			{
-				_CycleTime = value;
+				if (_CycleTime != value)
+				{
+					_CycleTime = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(CycleTime)));
+				}
 			}
 		}
 
@@ -512,7 +481,11 @@ namespace HansPlc
 
 			set
 			{
-				_LastExecTime = value;
+				if (_LastExecTime != value)
+				{
+					_LastExecTime = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(LastExecTime)));
+				}
 			}
 		}
 
@@ -526,7 +499,11 @@ namespace HansPlc
 
 			set
 			{
-				_Minimum = value;
+				if (_Minimum != value)
+				{
+					_Minimum = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Minimum)));
+				}
 			}
 		}
 
@@ -540,21 +517,11 @@ namespace HansPlc
 
 			set
 			{
-				_Maximum = value;
-			}
-		}
-
-		System.UInt32 _HalfOfExecTime;
-		public System.UInt32 HalfOfExecTime
-		{
-			get
-			{
-				return _HalfOfExecTime;
-			}
-
-			set
-			{
-				_HalfOfExecTime = value;
+				if (_Maximum != value)
+				{
+					_Maximum = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Maximum)));
+				}
 			}
 		}
 
@@ -565,7 +532,6 @@ namespace HansPlc
 			target.LastExecTime.Cyclic = LastExecTime;
 			target.Minimum.Cyclic = Minimum;
 			target.Maximum.Cyclic = Maximum;
-			target.HalfOfExecTime.Cyclic = HalfOfExecTime;
 		}
 
 		public void CopyPlainToCyclic(HansPlc.IInfluxData target)
@@ -580,7 +546,6 @@ namespace HansPlc
 			target.LastExecTime.Shadow = LastExecTime;
 			target.Minimum.Shadow = Minimum;
 			target.Maximum.Shadow = Maximum;
-			target.HalfOfExecTime.Shadow = HalfOfExecTime;
 		}
 
 		public void CopyPlainToShadow(HansPlc.IShadowInfluxData target)
@@ -595,7 +560,6 @@ namespace HansPlc
 			LastExecTime = source.LastExecTime.LastValue;
 			Minimum = source.Minimum.LastValue;
 			Maximum = source.Maximum.LastValue;
-			HalfOfExecTime = source.HalfOfExecTime.LastValue;
 		}
 
 		public void CopyCyclicToPlain(HansPlc.IInfluxData source)
@@ -610,7 +574,6 @@ namespace HansPlc
 			LastExecTime = source.LastExecTime.Shadow;
 			Minimum = source.Minimum.Shadow;
 			Maximum = source.Maximum.Shadow;
-			HalfOfExecTime = source.HalfOfExecTime.Shadow;
 		}
 
 		public void CopyShadowToPlain(HansPlc.IShadowInfluxData source)
@@ -618,6 +581,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.InfluxData)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainInfluxData()
 		{
 		}

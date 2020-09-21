@@ -451,7 +451,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainHansPlcTwinController : Vortex.Connector.IPlain
+	public partial class PlainHansPlcTwinController : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		PlainRecipeData _RecipeData;
 		public PlainRecipeData RecipeData
@@ -463,7 +463,11 @@ namespace HansPlc
 
 			set
 			{
-				_RecipeData = value;
+				if (_RecipeData != value)
+				{
+					_RecipeData = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(RecipeData)));
+				}
 			}
 		}
 
@@ -477,7 +481,11 @@ namespace HansPlc
 
 			set
 			{
-				_Utils = value;
+				if (_Utils != value)
+				{
+					_Utils = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Utils)));
+				}
 			}
 		}
 
@@ -491,7 +499,11 @@ namespace HansPlc
 
 			set
 			{
-				_prgInflux = value;
+				if (_prgInflux != value)
+				{
+					_prgInflux = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(prgInflux)));
+				}
 			}
 		}
 
@@ -505,7 +517,11 @@ namespace HansPlc
 
 			set
 			{
-				_MAIN = value;
+				if (_MAIN != value)
+				{
+					_MAIN = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(MAIN)));
+				}
 			}
 		}
 
@@ -519,7 +535,11 @@ namespace HansPlc
 
 			set
 			{
-				_prgMongoDb = value;
+				if (_prgMongoDb != value)
+				{
+					_prgMongoDb = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(prgMongoDb)));
+				}
 			}
 		}
 
@@ -533,7 +553,11 @@ namespace HansPlc
 
 			set
 			{
-				_prgVoiceSynsthesis = value;
+				if (_prgVoiceSynsthesis != value)
+				{
+					_prgVoiceSynsthesis = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(prgVoiceSynsthesis)));
+				}
 			}
 		}
 
@@ -547,7 +571,11 @@ namespace HansPlc
 
 			set
 			{
-				_prgWeatherStations = value;
+				if (_prgWeatherStations != value)
+				{
+					_prgWeatherStations = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(prgWeatherStations)));
+				}
 			}
 		}
 
@@ -615,6 +643,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.HansPlcTwinController)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainHansPlcTwinController()
 		{
 			_RecipeData = new PlainRecipeData();

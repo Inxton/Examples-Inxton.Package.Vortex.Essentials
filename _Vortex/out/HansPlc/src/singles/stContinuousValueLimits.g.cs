@@ -367,7 +367,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainstContinuousValueLimits : Vortex.Connector.IPlain
+	public partial class PlainstContinuousValueLimits : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		System.Single _Minimum;
 		public System.Single Minimum
@@ -379,7 +379,11 @@ namespace HansPlc
 
 			set
 			{
-				_Minimum = value;
+				if (_Minimum != value)
+				{
+					_Minimum = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Minimum)));
+				}
 			}
 		}
 
@@ -394,7 +398,11 @@ namespace HansPlc
 
 			set
 			{
-				_Acquired = value;
+				if (_Acquired != value)
+				{
+					_Acquired = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Acquired)));
+				}
 			}
 		}
 
@@ -408,7 +416,11 @@ namespace HansPlc
 
 			set
 			{
-				_Maximum = value;
+				if (_Maximum != value)
+				{
+					_Maximum = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Maximum)));
+				}
 			}
 		}
 
@@ -460,6 +472,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.stContinuousValueLimits)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainstContinuousValueLimits()
 		{
 		}

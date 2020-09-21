@@ -368,7 +368,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainprgMongoDb : Vortex.Connector.IPlain
+	public partial class PlainprgMongoDb : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		PlainstructMongoData __data;
 		public PlainstructMongoData _data
@@ -380,7 +380,11 @@ namespace HansPlc
 
 			set
 			{
-				__data = value;
+				if (__data != value)
+				{
+					__data = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(_data)));
+				}
 			}
 		}
 
@@ -424,6 +428,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.prgMongoDb)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainprgMongoDb()
 		{
 			__data = new PlainstructMongoData();

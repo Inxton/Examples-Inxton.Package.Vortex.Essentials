@@ -279,7 +279,7 @@ namespace HansPlc
             /// This is POCO object for its respective onliner class. For documentation of this type see the onliner class.
             /// </summary>
             /// <exclude />
-	public partial class PlainRecipeData : Vortex.Connector.IPlain
+	public partial class PlainRecipeData : System.ComponentModel.INotifyPropertyChanged, Vortex.Connector.IPlain
 	{
 		PlainstRecipe __recipe;
 		public PlainstRecipe _recipe
@@ -291,7 +291,11 @@ namespace HansPlc
 
 			set
 			{
-				__recipe = value;
+				if (__recipe != value)
+				{
+					__recipe = value;
+					PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(_recipe)));
+				}
 			}
 		}
 
@@ -335,6 +339,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.RecipeData)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainRecipeData()
 		{
 			__recipe = new PlainstRecipe();

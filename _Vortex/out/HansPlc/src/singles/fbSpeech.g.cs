@@ -167,6 +167,7 @@ namespace HansPlc
 			this.CopyShadowToPlain((HansPlc.fbSpeech)source);
 		}
 
+		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 		public PlainfbSpeech()
 		{
 		}
