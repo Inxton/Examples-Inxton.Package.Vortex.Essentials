@@ -143,6 +143,8 @@ It show the customization option when auto-generating the UI/HMI.
 
 ## InfluxDB
 
+**[Video guide](https://youtu.be/MPF8enCphbs).**
+
 In this example, we collect data from ```InfluxData``` PLC structure. Any primitive (base type) items added to this structure will be collected automatically into the database.
 
 FB ```fbInfluxPerformanceLogging``` has simple logic that populates ```InfluxData``` structure with values and executes a remote request to the .net application that takes care of storing data into the database.
@@ -200,6 +202,8 @@ For the server to use the config file, you will need to run it with parameters.
 ~~~ Powershell
 PS [YourDrive]:[InfluxDB bin directory]\> .\influxd.exe run -config .\influxdb.conf
 ~~~
+
+
 
 # License
 
