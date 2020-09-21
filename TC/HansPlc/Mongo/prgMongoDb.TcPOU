@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
-  <POU Name="fbInfluxPerformanceLogging" Id="{5ff4b3e5-e813-4ba9-ad4c-d1bedb24728c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK fbInfluxPerformanceLogging
+  <POU Name="prgMongoDb" Id="{b742ddc1-e283-4c02-9825-1a3363326113}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM prgMongoDb
 VAR
 	{attribute clr [ReadOnly()]}
 	{attribute clr [CompilerOmits("BuilderPlainer")]}
@@ -11,7 +11,7 @@ VAR
 	{attribute clr [CompilerOmits("BuilderPlainer")]}
 	_logDone : ULINT;
 	
-	_data : InfluxData;	
+	_data : structMongoData;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -25,20 +25,11 @@ IF(_data.Minimum > _data.LastExecTime) THEN _data.Minimum := _data.LastExecTime;
 IF(_logStart <= _logDone) THEN 
 	_logStart := _logStart + 1;	
 END_IF
-
 ]]></ST>
     </Implementation>
-    <LineIds Name="fbInfluxPerformanceLogging">
-      <LineId Id="9" Count="0" />
-      <LineId Id="20" Count="1" />
-      <LineId Id="72" Count="0" />
-      <LineId Id="59" Count="0" />
-      <LineId Id="48" Count="0" />
-      <LineId Id="50" Count="0" />
-      <LineId Id="27" Count="0" />
-      <LineId Id="30" Count="1" />
-      <LineId Id="24" Count="0" />
-      <LineId Id="22" Count="0" />
+    <LineIds Name="prgMongoDb">
+      <LineId Id="15" Count="9" />
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

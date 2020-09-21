@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+  <DUT Name="structMongoData" Id="{c9224563-90df-4141-b2b5-1d55e0e6af0f}">
+    <Declaration><![CDATA[TYPE structMongoData :
+STRUCT
+	CycleCount : UDINT;
+	CycleTime : UDINT;
+	LastExecTime: UDINT;
+	Minimum : UDINT := 0;
+	Maximum : UDINT := 4294967295;	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

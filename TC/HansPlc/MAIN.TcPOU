@@ -6,11 +6,13 @@
     <Implementation>
       <ST><![CDATA[prgWeatherStations();
 prgInflux();
+prgMongoDb();
 ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="10" Count="0" />
       <LineId Id="14" Count="0" />
+      <LineId Id="16" Count="0" />
       <LineId Id="12" Count="0" />
     </LineIds>
   </POU>

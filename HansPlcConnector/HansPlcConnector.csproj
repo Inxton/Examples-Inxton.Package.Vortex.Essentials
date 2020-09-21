@@ -123,6 +123,9 @@
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgInflux.g.cs">
       <Link>_generated\HansPlc\prgInflux.g.cs</Link>
     </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgMongoDb.g.cs">
+      <Link>_generated\HansPlc\prgMongoDb.g.cs</Link>
+    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\prgSimple.g.cs">
       <Link>_generated\HansPlc\prgSimple.g.cs</Link>
     </Compile>
@@ -141,6 +144,9 @@
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\stRecipe.g.cs">
       <Link>_generated\HansPlc\stRecipe.g.cs</Link>
     </Compile>
+    <Compile Include="..\_Vortex\out\HansPlc\src\singles\structMongoData.g.cs">
+      <Link>_generated\HansPlc\structMongoData.g.cs</Link>
+    </Compile>
     <Compile Include="..\_Vortex\out\HansPlc\src\singles\structWeatherNow.g.cs">
       <Link>_generated\HansPlc\structWeatherNow.g.cs</Link>
     </Compile>
@@ -156,6 +162,7 @@
     <Compile Include="Entry.cs" />
     <Compile Include="pex\fbWorldWeatherWatch.cs" />
     <Compile Include="pex\Influx\PlainInfluxData.cs" />
+    <Compile Include="pex\Mongo\PlainstructMongoData.cs" />
     <Compile Include="pex\structWeatherStation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -188,5 +195,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

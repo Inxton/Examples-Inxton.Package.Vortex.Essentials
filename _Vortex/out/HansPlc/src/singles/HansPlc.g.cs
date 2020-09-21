@@ -6,7 +6,7 @@ using Vortex.Connector.ValueTypes;
 using Vortex.Connector.Identity;
 using HansPlcConnector.Properties;
 
-[assembly: Vortex.Connector.Attributes.AssemblyPlcCounterPart("{\r\n  \"Types\": [\r\n    {\r\n      \"TypeAttributes\": \"\",\r\n      \"TypeName\": \"enumStationStatus\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 5\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbInfluxPerformanceLogging\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbSpeech\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbFluentString\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbSimpleRemoteExec\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbWorldWeatherWatch\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"InfluxData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stContinuousValueLimits\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stRecipe\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty OpenMap \\\"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\\\" }\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"structWeatherStation\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"RecipeData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"Utils\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"prgInflux\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"MAIN\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"prgVoiceSynsthesis\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"Program\\\" }\",\r\n      \"TypeName\": \"prgWeatherStations\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    }\r\n  ],\r\n  \"Name\": \"HansPlc\",\r\n  \"Namespace\": \"HansPlc\"\r\n}")]
+[assembly: Vortex.Connector.Attributes.AssemblyPlcCounterPart("{\r\n  \"Types\": [\r\n    {\r\n      \"TypeAttributes\": \"\",\r\n      \"TypeName\": \"enumStationStatus\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 5\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbInfluxPerformanceLogging\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbSpeech\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbFluentString\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbSimpleRemoteExec\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"fbWorldWeatherWatch\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 4\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"InfluxData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"structMongoData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stContinuousValueLimits\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"stRecipe\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty OpenMap \\\"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\\\" }\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"structWeatherStation\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 1\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"RecipeData\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"Utils\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 0\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"prgInflux\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"MAIN\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"prgMongoDb\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"\\\" }\",\r\n      \"TypeName\": \"prgVoiceSynsthesis\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    },\r\n    {\r\n      \"TypeAttributes\": \"\\n{attribute addProperty Name \\\"Program\\\" }\",\r\n      \"TypeName\": \"prgWeatherStations\",\r\n      \"Namespace\": \"HansPlc\",\r\n      \"TypeMetaInfo\": 3\r\n    }\r\n  ],\r\n  \"Name\": \"HansPlc\",\r\n  \"Namespace\": \"HansPlc\"\r\n}")]
 namespace HansPlc
 {
 	public partial class HansPlcTwinController : Vortex.Connector.ITwinController, IHansPlcTwinController, IShadowHansPlcTwinController
@@ -131,6 +131,31 @@ namespace HansPlc
 			}
 		}
 
+		prgMongoDb _prgMongoDb;
+		public prgMongoDb prgMongoDb
+		{
+			get
+			{
+				return _prgMongoDb;
+			}
+		}
+
+		IprgMongoDb IHansPlcTwinController.prgMongoDb
+		{
+			get
+			{
+				return prgMongoDb;
+			}
+		}
+
+		IShadowprgMongoDb IShadowHansPlcTwinController.prgMongoDb
+		{
+			get
+			{
+				return prgMongoDb;
+			}
+		}
+
 		prgVoiceSynsthesis _prgVoiceSynsthesis;
 		public prgVoiceSynsthesis prgVoiceSynsthesis
 		{
@@ -187,6 +212,7 @@ namespace HansPlc
 			Utils.LazyOnlineToShadow();
 			prgInflux.LazyOnlineToShadow();
 			MAIN.LazyOnlineToShadow();
+			prgMongoDb.LazyOnlineToShadow();
 			prgVoiceSynsthesis.LazyOnlineToShadow();
 			prgWeatherStations.LazyOnlineToShadow();
 		}
@@ -197,6 +223,7 @@ namespace HansPlc
 			Utils.LazyShadowToOnline();
 			prgInflux.LazyShadowToOnline();
 			MAIN.LazyShadowToOnline();
+			prgMongoDb.LazyShadowToOnline();
 			prgVoiceSynsthesis.LazyShadowToOnline();
 			prgWeatherStations.LazyShadowToOnline();
 		}
@@ -208,6 +235,7 @@ namespace HansPlc
 			cloned.Utils = Utils.CreatePlainerType();
 			cloned.prgInflux = prgInflux.CreatePlainerType();
 			cloned.MAIN = MAIN.CreatePlainerType();
+			cloned.prgMongoDb = prgMongoDb.CreatePlainerType();
 			cloned.prgVoiceSynsthesis = prgVoiceSynsthesis.CreatePlainerType();
 			cloned.prgWeatherStations = prgWeatherStations.CreatePlainerType();
 			return cloned;
@@ -219,6 +247,7 @@ namespace HansPlc
 			cloned.Utils = Utils.CreatePlainerType();
 			cloned.prgInflux = prgInflux.CreatePlainerType();
 			cloned.MAIN = MAIN.CreatePlainerType();
+			cloned.prgMongoDb = prgMongoDb.CreatePlainerType();
 			cloned.prgVoiceSynsthesis = prgVoiceSynsthesis.CreatePlainerType();
 			cloned.prgWeatherStations = prgWeatherStations.CreatePlainerType();
 			return cloned;
@@ -273,6 +302,7 @@ namespace HansPlc
 			_Utils = new Utils(this.Connector, "", "Utils");
 			_prgInflux = new prgInflux(this.Connector, "", "prgInflux");
 			_MAIN = new MAIN(this.Connector, "", "MAIN");
+			_prgMongoDb = new prgMongoDb(this.Connector, "", "prgMongoDb");
 			_prgVoiceSynsthesis = new prgVoiceSynsthesis(this.Connector, "", "prgVoiceSynsthesis");
 			_prgWeatherStations = new prgWeatherStations(this.Connector, "Program", "prgWeatherStations");
 		}
@@ -284,6 +314,7 @@ namespace HansPlc
 			_Utils = new Utils(this.Connector, "", "Utils");
 			_prgInflux = new prgInflux(this.Connector, "", "prgInflux");
 			_MAIN = new MAIN(this.Connector, "", "MAIN");
+			_prgMongoDb = new prgMongoDb(this.Connector, "", "prgMongoDb");
 			_prgVoiceSynsthesis = new prgVoiceSynsthesis(this.Connector, "", "prgVoiceSynsthesis");
 			_prgWeatherStations = new prgWeatherStations(this.Connector, "Program", "prgWeatherStations");
 		}
@@ -295,6 +326,7 @@ namespace HansPlc
 			_Utils = new Utils(this.Connector, "", "Utils");
 			_prgInflux = new prgInflux(this.Connector, "", "prgInflux");
 			_MAIN = new MAIN(this.Connector, "", "MAIN");
+			_prgMongoDb = new prgMongoDb(this.Connector, "", "prgMongoDb");
 			_prgVoiceSynsthesis = new prgVoiceSynsthesis(this.Connector, "", "prgVoiceSynsthesis");
 			_prgWeatherStations = new prgWeatherStations(this.Connector, "Program", "prgWeatherStations");
 		}
@@ -346,6 +378,11 @@ namespace HansPlc
 			get;
 		}
 
+		IprgMongoDb prgMongoDb
+		{
+			get;
+		}
+
 		IprgVoiceSynsthesis prgVoiceSynsthesis
 		{
 			get;
@@ -382,6 +419,11 @@ namespace HansPlc
 		}
 
 		IShadowMAIN MAIN
+		{
+			get;
+		}
+
+		IShadowprgMongoDb prgMongoDb
 		{
 			get;
 		}
@@ -467,6 +509,20 @@ namespace HansPlc
 			}
 		}
 
+		PlainprgMongoDb _prgMongoDb;
+		public PlainprgMongoDb prgMongoDb
+		{
+			get
+			{
+				return _prgMongoDb;
+			}
+
+			set
+			{
+				_prgMongoDb = value;
+			}
+		}
+
 		PlainprgVoiceSynsthesis _prgVoiceSynsthesis;
 		public PlainprgVoiceSynsthesis prgVoiceSynsthesis
 		{
@@ -501,6 +557,7 @@ namespace HansPlc
 			Utils.CopyPlainToCyclic(target.Utils);
 			prgInflux.CopyPlainToCyclic(target.prgInflux);
 			MAIN.CopyPlainToCyclic(target.MAIN);
+			prgMongoDb.CopyPlainToCyclic(target.prgMongoDb);
 			prgVoiceSynsthesis.CopyPlainToCyclic(target.prgVoiceSynsthesis);
 			prgWeatherStations.CopyPlainToCyclic(target.prgWeatherStations);
 		}
@@ -516,6 +573,7 @@ namespace HansPlc
 			Utils.CopyPlainToShadow(target.Utils);
 			prgInflux.CopyPlainToShadow(target.prgInflux);
 			MAIN.CopyPlainToShadow(target.MAIN);
+			prgMongoDb.CopyPlainToShadow(target.prgMongoDb);
 			prgVoiceSynsthesis.CopyPlainToShadow(target.prgVoiceSynsthesis);
 			prgWeatherStations.CopyPlainToShadow(target.prgWeatherStations);
 		}
@@ -531,6 +589,7 @@ namespace HansPlc
 			Utils.CopyCyclicToPlain(source.Utils);
 			prgInflux.CopyCyclicToPlain(source.prgInflux);
 			MAIN.CopyCyclicToPlain(source.MAIN);
+			prgMongoDb.CopyCyclicToPlain(source.prgMongoDb);
 			prgVoiceSynsthesis.CopyCyclicToPlain(source.prgVoiceSynsthesis);
 			prgWeatherStations.CopyCyclicToPlain(source.prgWeatherStations);
 		}
@@ -546,6 +605,7 @@ namespace HansPlc
 			Utils.CopyShadowToPlain(source.Utils);
 			prgInflux.CopyShadowToPlain(source.prgInflux);
 			MAIN.CopyShadowToPlain(source.MAIN);
+			prgMongoDb.CopyShadowToPlain(source.prgMongoDb);
 			prgVoiceSynsthesis.CopyShadowToPlain(source.prgVoiceSynsthesis);
 			prgWeatherStations.CopyShadowToPlain(source.prgWeatherStations);
 		}
@@ -561,6 +621,7 @@ namespace HansPlc
 			_Utils = new PlainUtils();
 			_prgInflux = new PlainprgInflux();
 			_MAIN = new PlainMAIN();
+			_prgMongoDb = new PlainprgMongoDb();
 			_prgVoiceSynsthesis = new PlainprgVoiceSynsthesis();
 			_prgWeatherStations = new PlainprgWeatherStations();
 		}
