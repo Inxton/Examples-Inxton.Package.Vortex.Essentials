@@ -1,5 +1,7 @@
 ![Inxton logo](./assets/logo.png)
 
+**ALL EXAMPLES ARE NOW IN VS2019 FORMAT**
+
 If you have ever struggled to maintain your HMI in synch with your PLC program, you should continue reading. This repo presents a unique library that brings PLC blocks into compelling visual form.
 Maintaining the UI/HMI that involves PLC can be very expensive, especially when there are many conflicting requirements throughout the life cycle of the application. Inxton comes with an answer that allows you to scale your solution quickly.
 
