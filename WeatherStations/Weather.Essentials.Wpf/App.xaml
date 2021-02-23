@@ -9,11 +9,11 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Vortex.Presentation.Styling.Wpf;component/VortexStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            
-            <!--HERE YOU CAN OVERRIDE DEFAULT COLORS -->
+
+            <!--  HERE YOU CAN OVERRIDE DEFAULT COLORS  -->
             <!--<Color x:Key="PrimaryColor">#5bc5f2</Color>
             <Color x:Key="OnPrimaryColor">#000000</Color>
-            
+
             <Color x:Key="SecondaryColor">#0494bf</Color>
             <Color x:Key="OnSecondaryColor">#ffffff</Color>
 
@@ -37,7 +37,7 @@
 
             <Color x:Key="SingalOffColor">#000000</Color>
             <Color x:Key="SignalOnColor">#FF2200</Color>-->
-            
+
             <SolidColorBrush x:Key="Primary" Color="{StaticResource PrimaryColor}" />
             <SolidColorBrush x:Key="OnPrimary" Color="{StaticResource OnPrimaryColor}" />
 
@@ -46,10 +46,10 @@
 
             <SolidColorBrush x:Key="Background" Color="{StaticResource BackgroundColor}" />
             <SolidColorBrush x:Key="OnBackground" Color="{StaticResource OnBackgroundColor}" />
-            
+
             <SolidColorBrush x:Key="Surface" Color="{StaticResource SurfaceColor}" />
             <SolidColorBrush x:Key="OnSurface" Color="{StaticResource OnSurfaceColor}" />
-            
+
             <SolidColorBrush x:Key="Error" Color="{StaticResource ErrorColor}" />
             <SolidColorBrush x:Key="OnError" Color="{StaticResource OnErrorColor}" />
 
@@ -59,12 +59,12 @@
             <SolidColorBrush x:Key="Alert" Color="{StaticResource AlertColor}" />
             <SolidColorBrush x:Key="OnAlert" Color="{StaticResource OnAlertColor}" />
 
-            <SolidColorBrush x:Key="Warning" Color="{StaticResource WarningColor}"/>
-            <SolidColorBrush x:Key="OnWarning" Color="{StaticResource OnWarningColor}"/>
+            <SolidColorBrush x:Key="Warning" Color="{StaticResource WarningColor}" />
+            <SolidColorBrush x:Key="OnWarning" Color="{StaticResource OnWarningColor}" />
 
-            <SolidColorBrush x:Key="SignalOn" Color="{StaticResource SignalOnColor}"/>
-            <SolidColorBrush x:Key="SignalOff" Color="{StaticResource SignalOffColor}"/>
-            
+            <SolidColorBrush x:Key="SignalOn" Color="{StaticResource SignalOnColor}" />
+            <SolidColorBrush x:Key="SignalOff" Color="{StaticResource SignalOffColor}" />
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

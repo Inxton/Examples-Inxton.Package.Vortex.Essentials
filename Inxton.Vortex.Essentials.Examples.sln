@@ -3,15 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "TC", "TC\TC.tsproj", "{302D4FF0-5A36-45BF-9E8D-1E95A0D35FC6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HansPlcConnector", "HansPlcConnector\HansPlcConnector.csproj", "{9AE6BC87-464C-4B4A-AD99-596B9F167676}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeatherStations", "WeatherStations", "{B75D49D5-B125-4419-90F1-7C4FB2314A38}"
-	ProjectSection(SolutionItems) = preProject
-		WeatherStations\README.md = WeatherStations\README.md
-	EndProjectSection
-EndProject
+
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Connector", "_Connector", "{757990E4-F6CE-41F1-A0AC-27FAEDEB0B4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.Essentials.Wpf", "WeatherStations\Weather.Essentials.Wpf\Weather.Essentials.Wpf.csproj", "{95E479AC-8808-46EB-BAB1-D75A3D9F9F74}"
@@ -23,6 +15,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{F827BA8D-3CCF-48E4-B003-3BEC7FA9B20E}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "TC", "TC\TC.tsproj", "{302D4FF0-5A36-45BF-9E8D-1E95A0D35FC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HansPlcConnector", "HansPlcConnector\HansPlcConnector.csproj", "{9AE6BC87-464C-4B4A-AD99-596B9F167676}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeatherStations", "WeatherStations", "{B75D49D5-B125-4419-90F1-7C4FB2314A38}"
+	ProjectSection(SolutionItems) = preProject
+		WeatherStations\README.md = WeatherStations\README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfuxDb", "InfuxDb", "{53DD1E5F-5384-4724-A6B1-A933F1D02F0C}"

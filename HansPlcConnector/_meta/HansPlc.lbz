@@ -1,0 +1,125 @@
+{
+  "AliasBlocks": [],
+  "EnumBlocks": [
+    {
+      "Name": "enumStationStatus",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'enumStationStatus']\n{attribute 'qualified_only'}\n{attribute 'strict'}\nTYPE enumStationStatus :\n(\n\tUnknown := 0,\n\tAvailable := 1,\n\tUnAvailable := 2\t\n);\nEND_TYPE\n",
+      "MirrorFiles": null
+    }
+  ],
+  "FunctionBlocks": [
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "fbInfluxPerformanceLogging",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'fbInfluxPerformanceLogging']\nFUNCTION_BLOCK fbInfluxPerformanceLogging\nVAR\n\t{attribute clr [ReadOnly()]}\n\t{attribute clr [CompilerOmits(\"BuilderPlainer\")]}\n\t{attribute clr [RenderIgnore()]}\n\t_logStart : ULINT;\n\t{attribute clr [RenderIgnore()]}\n\t{attribute clr [CompilerOmits(\"BuilderPlainer\")]}\n\t_logDone : ULINT;\n\t\n\t_data : InfluxData;\t\nEND_VAR\n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "fbSpeech",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'fbSpeech']\nFUNCTION_BLOCK fbSpeech EXTENDS fbSimpleRemoteExec \n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "fbFluentString",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'fbFluentString']\nFUNCTION_BLOCK fbFluentString\nVAR\n\t_resultString : STRING(255);\nEND_VAR\n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "fbSimpleRemoteExec",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'fbSimpleRemoteExec']\nFUNCTION_BLOCK ABSTRACT fbSimpleRemoteExec\nVAR\n\t_start : UINT;\n\t_done : UINT;\nEND_VAR\n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "fbWorldWeatherWatch",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'fbWorldWeatherWatch']\n{attribute wpf [Container(Layout.Tabs)]}\nFUNCTION_BLOCK fbWorldWeatherWatch\nVAR\t\n\t{attribute addProperty Name \"<#North pole station#>\"}\n\t{attribute addProperty OpenMap \"https://www.openstreetmap.org/?mlat=74.652&mlon=-95.556#map=6/74.652/-95.556\"}\n\tNorthPole : structWeatherStation := (StationICAO := 'CYRB');\n\t{attribute addProperty Name \"<#South pole station#>\"}\n\t{attribute addProperty OpenMap \"https://www.openstreetmap.org/?mlat=-85.05113&mlon=-16.80701#map=1/-85.05113/-16.80701\"}\n\tSouthPole : structWeatherStation := (StationICAO := 'NZSP');\n\t{attribute addProperty Name \"<#Verl, Germany#>\"}\n\t{attribute addProperty OpenMap \"https://www.openstreetmap.org/?mlat=51.5799&mlon=8.415#map=6/51.5799/8.4155\"}\n\tVerl : structWeatherStation := (StationICAO := 'EDLP');\n\t{attribute addProperty Name \"<#Kriva, Slovakia#>\"}\n\t{attribute addProperty OpenMap \"https://www.openstreetmap.org/?mlat=48.1723&mlon=17.2158#map=6/48.1723/17.2158\"}\n\tKriva : structWeatherStation := (StationICAO := 'LZIB');\t\nEND_VAR\n ",
+      "MirrorFiles": null
+    }
+  ],
+  "GlobalVariableTables": [],
+  "Name": "HansPlc",
+  "Namespace": "HansPlc",
+  "ProgramBlocks": [
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "prgInflux",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'prgInflux']\nPROGRAM prgInflux\nVAR\n\t_influx : fbInfluxPerformanceLogging;\nEND_VAR\n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "MAIN",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'MAIN']\nPROGRAM MAIN\n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "prgMongoDb",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'prgMongoDb']\nPROGRAM prgMongoDb\nVAR\n\t{attribute clr [ReadOnly()]}\n\t{attribute clr [CompilerOmits(\"BuilderPlainer\")]}\n\t{attribute clr [RenderIgnore()]}\n\t_logStart : ULINT;\n\t{attribute clr [RenderIgnore()]}\n\t{attribute clr [CompilerOmits(\"BuilderPlainer\")]}\n\t_logDone : ULINT;\n\t\n\t_data : structMongoData;\nEND_VAR\n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "prgVoiceSynsthesis",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'prgVoiceSynsthesis']\nPROGRAM prgVoiceSynsthesis\nVAR\nEND_VAR\n",
+      "MirrorFiles": null
+    },
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "prgWeatherStations",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'prgWeatherStations']\n{attribute addProperty Name \"Program\"}\n{attribute wpf [Container(Layout.Stack)]}\nPROGRAM prgWeatherStations\nVAR\t\n\t{attribute addProperty Name \"Weather Cyclic\"}\n\t_weatherStations : fbWorldWeatherWatch;\t\n\t{attribute wpf [Container(Layout.Stack)]}\n\t{attribute wpf [Group(Layout.GroupBox)]}\n    {attribute addProperty Name \"<#What plc says#>\"}\t\n\tPlcCommentOnCurrentWeather : STRING(255) := 'TEST';\t\nEND_VAR\n",
+      "MirrorFiles": null
+    }
+  ],
+  "StructBlocks": [
+    {
+      "Name": "InfluxData",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'InfluxData'] [STRUCT]\nTYPE InfluxData :\nSTRUCT\n\tCycleCount : UDINT;\n\tCycleTime : UDINT;\n\tLastExecTime: UDINT;\n\tMinimum : UDINT := 0;\n\tMaximum : UDINT := 4294967295;\t\nEND_STRUCT\nEND_TYPE\n",
+      "MirrorFiles": null
+    },
+    {
+      "Name": "structMongoData",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'structMongoData'] [STRUCT]\nTYPE structMongoData :\nSTRUCT\n\tCycleCount : UDINT;\n\tCycleTime : UDINT;\n\tLastExecTime: UDINT;\n\tMinimum : UDINT := 0;\n\tMaximum : UDINT := 4294967295;\t\nEND_STRUCT\nEND_TYPE\n",
+      "MirrorFiles": null
+    },
+    {
+      "Name": "stContinuousValueLimits",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'stContinuousValueLimits'] [STRUCT]\n{attribute wpf [Container(Layout.Wrap)]}\n{attribute wpf [Group(Layout.GroupBox)]}\n{attribute addProperty Name \"\"}\nTYPE stContinuousValueLimits :\nSTRUCT\t\n\t{attribute addProperty Name \"<#Min#>\"}\n\tMinimum : REAL;\t\t\n\t{attribute addProperty Name \"<#Acquired#>\"}\n\t{attribute wpf [RenderIgnore(\"Control\", \"ShadowControl\")]} // Prevents rednering this memember when 'PresentationType' is set to 'Control' or 'ShadowControl'.\n\tAcquired : REAL;\t\n\t{attribute addProperty Name \"<#Max#>\"}\n\tMaximum : REAL;\nEND_STRUCT\nEND_TYPE\n",
+      "MirrorFiles": null
+    },
+    {
+      "Name": "stRecipe",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'stRecipe'] [STRUCT]\nTYPE stRecipe :\nSTRUCT\n\t{attribute addProperty Name \"<#Recipe name#>\"}\n\t_recipeName : STRING;\n\t{attribute addProperty Name \"<#Description#>\"}\n\t_description : STRING(255);\n\t// Uncomment following lines run the compiler and check that the fiels are added to the UI, and you can save and retrieve the newly added variables.\n\t(*{attribute addProperty Name \"<#Length#> [mm]\"}\t\t\n\t_lenght : stContinuousValueLimits;\t\n\t{attribute addProperty Name \"<#Height#> [mm]\"}\n\t_height : stContinuousValueLimits;\n\t{attribute addProperty Name \"<#Thickness#> [mm]\"}\n\t_thikness : stContinuousValueLimits;*)\t\nEND_STRUCT\nEND_TYPE\n",
+      "MirrorFiles": null
+    },
+    {
+      "Name": "structWeatherStation",
+      "DeclarationText": "[NS : 'HansPlc' NAME : 'structWeatherStation'] [STRUCT]\n{attribute wpf [Container(Layout.Stack)]}\n{attribute addProperty OpenMap \"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\"}\nTYPE structWeatherStation :\nSTRUCT\n\t{attribute addProperty Name \"<#Station name (ICAO)#>\"}\t\n\tStationICAO : STRING(4);\n\t{attribute addProperty Name \"<#Station status#>\"}\n    StationStatus : enumStationStatus; \n\t{attribute addProperty Name \"<#Dew Point#>\"}\t\n\t{attribute addProperty Units \"°C\"}\n\tDewPoint : REAL;\n\t{attribute addProperty Name \"<#Pressure#>\"}\n    {attribute addProperty Units \"Torr\"}\t\n\tPressure : REAL;\n\t{attribute addProperty Name \"<#Temperature#>\"}\n\t{attribute addProperty Units \"°C\"}\n\tTemp : REAL;\n\t{attribute addProperty Name \"<#Visibility#>\"}\n    {attribute addProperty Units \"km\"}\t\n\tVisibility : REAL;\t\t\t\n\t{attribute addProperty Name \"<#Wind heading#>\"}\n    {attribute addProperty Units \"Azimuth\"}\t\n\tWindHeading : UINT;\t\n\t{attribute addProperty Name \"<#Wind speed#>\"}\n    {attribute addProperty Units \"m/s\"}\t\n\tWindSpeed : REAL;\t\nEND_STRUCT\nEND_TYPE\n",
+      "MirrorFiles": null
+    }
+  ],
+  "UnionBlocks": []
+}

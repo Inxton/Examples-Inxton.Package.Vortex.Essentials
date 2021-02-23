@@ -1,0 +1,114 @@
+{
+  "Types": [
+    {
+      "TypeAttributes": "",
+      "TypeName": "enumStationStatus",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 5
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbInfluxPerformanceLogging",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbSpeech",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbFluentString",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbSimpleRemoteExec",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbWorldWeatherWatch",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "InfluxData",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "structMongoData",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stContinuousValueLimits",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stRecipe",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty OpenMap \"https://www.openstreetmap.org/search?query=Kriva#map=13/49.2826/19.4791\" }\n{attribute addProperty Name \"\" }",
+      "TypeName": "structWeatherStation",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "RecipeData",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 0
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "Utils",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 0
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "prgInflux",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "MAIN",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "prgMongoDb",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "prgVoiceSynsthesis",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"Program\" }",
+      "TypeName": "prgWeatherStations",
+      "Namespace": "HansPlc",
+      "TypeMetaInfo": 3
+    }
+  ],
+  "Name": "HansPlc",
+  "Namespace": "HansPlc"
+}
