@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="InfluxData.Net" Version="8.0.1" />
     <PackageReference Include="InfluxDB.LineProtocol" Version="1.1.1" />
-    <PackageReference Include="Inxton.Package.Vortex.Essentials.Wpf" Version="1.9.3" />
+    <PackageReference Include="Inxton.Package.Vortex.Essentials.Wpf" Version="1.9.6" />
     <PackageReference Include="OxyPlot.Wpf" Version="2.0.0" />
   </ItemGroup>  
   <ItemGroup>
